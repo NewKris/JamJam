@@ -1,26 +1,23 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace JamJam.Runtime.Player {
     public class DrinkHolder : MonoBehaviour {
-        public bool canTakeDrinkFrom = true;
-        public GameObject proxy;
+        public UnityEvent onReceiveDrink;
+        public UnityEvent onRemoveDrink;
         
         public DrinkData HeldDrink { get; private set; }
         public bool HasDrink => HeldDrink != null;
         
         public void ReceiveDrink(DrinkData drink) {
             HeldDrink = drink;
-            proxy.SetActive(true);
+            onReceiveDrink.Invoke();
         }
         
         public void RemoveDrink() {
             HeldDrink = null;
-            proxy.SetActive(false);
-        }
-
-        private void Awake() {
-            proxy.SetActive(false);
+            onRemoveDrink.Invoke();
         }
     }
 }

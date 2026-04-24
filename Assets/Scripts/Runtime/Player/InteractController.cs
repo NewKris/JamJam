@@ -24,7 +24,9 @@ namespace JamJam.Runtime.Player {
             if (Physics.Raycast(GetRay(), out RaycastHit hit, maxInteractDistance, interactMask)) {
                 if (hit.collider.TryGetComponent(out DrinkSource _)) {
                     drink.GrabDrink(new DrinkData());
-                } else if (hit.collider.TryGetComponent(out DrinkHolder holder) && holder.HasDrink) {
+                } else if (hit.collider.TryGetComponent(out DrinkHolder holder) 
+                           && holder.HasDrink
+                ) {
                     drink.GrabDrink(holder.HeldDrink);
                     holder.RemoveDrink();
                 }

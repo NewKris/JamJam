@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &112985000
 Transform:
   m_ObjectHideFlags: 0
@@ -1959,8 +1959,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d5f78b7bee841ddb43f12747300eb0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canTakeDrinkFrom: 1
-  proxy: {fileID: 112984999}
+  onReceiveDrink:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 112984999}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onRemoveDrink:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 112984999}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1190091424 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}

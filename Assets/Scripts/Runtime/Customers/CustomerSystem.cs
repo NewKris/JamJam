@@ -13,11 +13,6 @@ namespace JamJam.Runtime.Customers {
 
         private int _satisfaction;
         private float _lastSpawnTime;
-        private HashSet<CustomerData> _closedCustomers;
-
-        private void Start() {
-            _closedCustomers = new HashSet<CustomerData>(seats.Length);
-        }
 
         private void Update() {
             if (Time.time - _lastSpawnTime > spawnRate) {
@@ -35,14 +30,12 @@ namespace JamJam.Runtime.Customers {
         }
 
         private void SpawnCustomer(CustomerData customer, CustomerSeat seat) {
-            _closedCustomers.Add(customer);
             CustomerEntity entity = Instantiate(customerPrefab).GetComponent<CustomerEntity>();
             entity.EnterBar(seat, customer);
         }
         
         private CustomerData FindAvailableCustomer() {
             List<CustomerData> inactiveCustomers = availableCustomers
-                .Where(x => !_closedCustomers.Contains(x))
                 .ToList();
             
             int i = Random.Range(0, inactiveCustomers.Count);

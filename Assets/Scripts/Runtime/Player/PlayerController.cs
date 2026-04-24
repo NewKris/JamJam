@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 
 namespace JamJam.Runtime.Player {
     public class PlayerController : MonoBehaviour {
-        public static event Action OnInteract;
+        public static event Action OnGrab;
+        public static event Action OnRelease;
         
         public static Vector2 DeltaMouse { get; private set; }
 
@@ -15,7 +16,8 @@ namespace JamJam.Runtime.Player {
         private void Awake() {
             _lookAction = ActionMap["Look"];
             
-            ActionMap["Interact"].performed += _ =>  OnInteract?.Invoke();
+            ActionMap["Interact"].performed += _ =>  OnGrab?.Invoke();
+            ActionMap["Interact"].canceled += _ =>  OnRelease?.Invoke();
             
             ActionMap.Enable();
         }

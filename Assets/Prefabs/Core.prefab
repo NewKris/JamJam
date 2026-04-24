@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 4014871520667263246}
   - component: {fileID: 836251742937653928}
   - component: {fileID: 1920561401896634912}
+  - component: {fileID: 1587494403016700387}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -167,6 +168,20 @@ MonoBehaviour:
   interactMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1587494403016700387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204244765770068787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3e8717f6ae4f76b07c9d58c213b00e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drinkObject: {fileID: 4944690123575437535}
+  maxIngredients: 5
 --- !u!1 &3175845711150778446
 GameObject:
   m_ObjectHideFlags: 0

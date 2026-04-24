@@ -182,7 +182,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8948502054214973881}
   - component: {fileID: 6878060369546553536}
-  - component: {fileID: 7008861377075422685}
   - component: {fileID: 5728773496190516614}
   m_Layer: 0
   m_Name: Customer Prefab
@@ -229,33 +228,6 @@ MonoBehaviour:
     alcohol: 0
     isPoison: 0
     isBeer: 0
---- !u!114 &7008861377075422685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8931800675557236205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 444bddc532864b678a4f83b6804c9afc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onInteract:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6878060369546553536}
-        m_TargetAssemblyTypeName: JamJam.Runtime.Customers.CustomerEntity, Assembly-CSharp
-        m_MethodName: GiveDrink
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!136 &5728773496190516614
 CapsuleCollider:
   m_ObjectHideFlags: 0

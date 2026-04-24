@@ -9,13 +9,16 @@ namespace JamJam.Runtime.Player {
 
         private Transform _pitchPivot;
         private Transform _yawPivot;
-        
-        public void Look(Vector2 deltaMouse, float dt) {
-            
-        }
 
         private void Start() {
             CreateHierarchy();
+        }
+
+        private void Update() {
+            Look(PlayerController.DeltaMouse, Time.deltaTime);
+        }
+
+        private void Look(Vector2 deltaMouse, float dt) {
         }
 
         private void CreateHierarchy() {
@@ -27,6 +30,8 @@ namespace JamJam.Runtime.Player {
             _pitchPivot.SetParent(_yawPivot);
             _pitchPivot.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
             
+            transform.SetParent(_pitchPivot);
+            transform.SetLocalPositionAndRotation(Vector2.zero, Quaternion.identity);
         }
     }
 }

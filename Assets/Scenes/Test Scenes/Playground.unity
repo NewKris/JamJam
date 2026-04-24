@@ -2083,6 +2083,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: ingredients.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: 'ingredients.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a6b7edc6c925ed5419f6e1b4fa85c844, type: 2}
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: 'ingredients.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 25daab2766d8d934b867ed59c6b8c9c1, type: 2}
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: 'ingredients.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: ac2566e6b18e39144b3cb15773fb5daf, type: 2}
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: 'ingredients.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 72b33cd5228a62e44960f921dd3fddb7, type: 2}
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: 'ingredients.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f6205511738013a4ea4cc82d427b1f55, type: 2}
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: 'ingredients.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: cd9852c4cec8b804e9003d6496a4ba4f, type: 2}
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: 'ingredients.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 6061406192bbd524a962a7cdcfe2f0ac, type: 2}
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: 'ingredients.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: cd764f4ff398c82439d6490c18195ad5, type: 2}
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: 'ingredients.Array.data[8]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c51e0dda2c695d41aba647855a01b83, type: 2}
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: 'ingredients.Array.data[9]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e3fa424c26a927a4eb42eb0ace87753f, type: 2}
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: 'ingredients.Array.data[10]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 18776069edee9384eae28c221d7e31ad, type: 2}
+    - target: {fileID: 1587494403016700387, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
+      propertyPath: 'ingredients.Array.data[11]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 5496c33da974a084894c7ffb3d51087f, type: 2}
     - target: {fileID: 1920561401896634912, guid: 20ee05450bb1f65429f48158ebe9dd1b, type: 3}
       propertyPath: drink
       value: 

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Werehorse.Runtime.Utility.Physics {
+namespace JamJam.Runtime.Utility.Physics {
     public abstract class PhysicsCaster : MonoBehaviour {
         [Header("Debug")] 
         public float thickness = 1;

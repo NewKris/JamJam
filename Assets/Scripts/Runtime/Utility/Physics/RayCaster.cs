@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Werehorse.Runtime.Utility.Physics {
+namespace JamJam.Runtime.Utility.Physics {
     public class RayCaster : PhysicsCaster {
         public override bool Evaluate(out RaycastHit hit) {
             Ray ray = new Ray(transform.position, GetDirection());

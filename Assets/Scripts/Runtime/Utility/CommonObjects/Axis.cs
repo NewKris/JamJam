@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Werehorse.Runtime.Utility.CommonObjects {
+namespace JamJam.Runtime.Utility.CommonObjects {
     [Serializable]
     public partial struct Axis {
         [SerializeField, Range(-1, 1)] private float value;

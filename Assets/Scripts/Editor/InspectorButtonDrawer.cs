@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Reflection;
+using JamJam.Runtime.Utility.Attributes;
 using UnityEditor;
 using UnityEngine;
-using Werehorse.Runtime.Utility.Attributes;
 using Object = UnityEngine.Object;
 
 namespace Werehorse.Editor {

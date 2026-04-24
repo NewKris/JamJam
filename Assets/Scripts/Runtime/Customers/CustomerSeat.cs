@@ -1,6 +1,6 @@
 ﻿using System;
+using JamJam.Runtime.Utility;
 using UnityEngine;
-using Werehorse.Runtime.Utility;
 
 namespace JamJam.Runtime.Customers {
     public class CustomerSeat : MonoBehaviour {

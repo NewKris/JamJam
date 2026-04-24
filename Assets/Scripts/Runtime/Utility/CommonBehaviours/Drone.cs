@@ -1,7 +1,7 @@
+using JamJam.Runtime.Utility.CommonObjects;
 using UnityEngine;
-using Werehorse.Runtime.Utility.CommonObjects;
 
-namespace Werehorse.Runtime.Utility.CommonBehaviours {
+namespace JamJam.Runtime.Utility.CommonBehaviours {
     /// <summary>
     /// Follows a target with soft damping.
     /// </summary>

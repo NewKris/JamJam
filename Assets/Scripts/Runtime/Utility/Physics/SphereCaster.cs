@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Werehorse.Runtime.Utility.Physics {
+namespace JamJam.Runtime.Utility.Physics {
     public class SphereCaster : PhysicsCaster {
         public float radius = 0.5f;
         

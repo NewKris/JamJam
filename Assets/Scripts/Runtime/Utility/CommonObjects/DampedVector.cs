@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Werehorse.Runtime.Utility.CommonObjects {
+namespace JamJam.Runtime.Utility.CommonObjects {
 	public struct DampedVector
 	{
 		private Vector3 _velocity;

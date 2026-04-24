@@ -1,6 +1,6 @@
-﻿using UnityEditor;
+﻿using JamJam.Runtime.Utility.Attributes;
+using UnityEditor;
 using UnityEngine;
-using Werehorse.Runtime.Utility.Attributes;
 
 namespace Werehorse.Editor {
 	[CustomPropertyDrawer(typeof(BoolOptions))]

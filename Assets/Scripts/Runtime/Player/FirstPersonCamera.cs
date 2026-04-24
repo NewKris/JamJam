@@ -1,6 +1,6 @@
 ﻿using System;
+using JamJam.Runtime.Utility.CommonObjects;
 using UnityEngine;
-using Werehorse.Runtime.Utility.CommonObjects;
 
 namespace JamJam.Runtime.Player {
     public class FirstPersonCamera : MonoBehaviour {

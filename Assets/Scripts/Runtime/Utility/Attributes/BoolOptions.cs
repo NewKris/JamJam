@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Werehorse.Runtime.Utility.Attributes {
+namespace JamJam.Runtime.Utility.Attributes {
 	public class BoolOptions : PropertyAttribute {
 		public readonly string inspectorName;
 		public readonly string trueOption;

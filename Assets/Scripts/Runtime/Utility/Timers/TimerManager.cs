@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Werehorse.Runtime.Utility.Timers {
+namespace JamJam.Runtime.Utility.Timers {
     public class TimerManager : MonoBehaviour {
         private static TimerManager Instance;
         private static HashSet<Timer> Timers = new HashSet<Timer>();

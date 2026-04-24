@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 namespace JamJam.Runtime.Player {
     public class PlayerController : MonoBehaviour {
+        public static event Action OnInteract;
+        
         public static Vector2 DeltaMouse { get; private set; }
 
         private InputAction _lookAction;
@@ -12,6 +14,9 @@ namespace JamJam.Runtime.Player {
         
         private void Awake() {
             _lookAction = ActionMap["Look"];
+            
+            ActionMap["Interact"].performed += _ =>  OnInteract?.Invoke();
+            
             ActionMap.Enable();
         }
 

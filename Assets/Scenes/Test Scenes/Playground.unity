@@ -801,7 +801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30cb4035b224f3cad31ebb468023d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpawn: {fileID: 0}
 --- !u!1 &757393924
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customerPrefab: {fileID: 8931800675557236205, guid: c5d1f9f40fa9f6e4b93eecc2fff15a4e, type: 3}
-  spawnRate: 1
+  spawnRate: 2
   seats:
   - {fileID: 541016060}
   - {fileID: 809993405}
@@ -905,7 +904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30cb4035b224f3cad31ebb468023d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpawn: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,7 +1608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30cb4035b224f3cad31ebb468023d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpawn: {fileID: 0}
 --- !u!1001 &7697423461947652447
 PrefabInstance:
   m_ObjectHideFlags: 0

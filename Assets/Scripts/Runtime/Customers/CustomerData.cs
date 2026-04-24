@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using JamJam.Runtime.Bar;
+using UnityEngine;
 
 namespace JamJam.Runtime.Customers {
     [CreateAssetMenu(menuName = "Customer Data")]

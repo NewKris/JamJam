@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace JamJam.Runtime {
+namespace JamJam.Runtime.Player {
     public class PlayerController : MonoBehaviour {
 
     }

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adbfdf3a84f342fd938922d93adf29a0, type: 3}
-  m_Name: Cola
+  m_Name: NA_Mint
   m_EditorClassIdentifier: 
   flavour:
-    sweet: 3
-    sour: 1
-    salt: 3
-    bitter: 2
-    alcohol: 2
+    sweet: 0
+    sour: 0
+    salt: 0
+    bitter: 1
+    alcohol: 0
     isPoison: 0
     isBeer: 0
-  displayName: Cola
-  description: It's not Pepsi
+  displayName: 
+  description: 
   icon: {fileID: 0}
-  keyBind: W
+  keyBind: 

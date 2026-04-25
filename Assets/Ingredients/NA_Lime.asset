@@ -10,13 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adbfdf3a84f342fd938922d93adf29a0, type: 3}
-  m_Name: Mint
+  m_Name: NA_Lime
   m_EditorClassIdentifier: 
   flavour:
     sweet: 0
-    sour: 0
+    sour: 1
     salt: 0
     bitter: 0
     alcohol: 0
     isPoison: 0
     isBeer: 0
+  displayName: Lime
+  description: stuff
+  icon: {fileID: 0}
+  keyBind: 

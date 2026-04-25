@@ -145,16 +145,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621945774006684493}
   m_LocalRotation: {x: -0, y: -0.04486699, z: -0, w: 0.998993}
-  m_LocalPosition: {x: 0, y: 0, z: -0.17}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.17000008}
+  m_LocalScale: {x: 0.1, y: 0.05, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3415014119028900016}
-  m_Father: {fileID: 7212737825921651649}
+  m_Father: {fileID: 2970187065098362175}
   m_LocalEulerAnglesHint: {x: 0, y: -5.143, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8598252401156915076
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 4000867880917807187}
   - component: {fileID: 6834332315830229877}
   m_Layer: 0
-  m_Name: Quad (1)
+  m_Name: Reaction Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -387,8 +387,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7747182712484906396}
+  m_Children: []
   m_Father: {fileID: 8948502054214973881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3769936489825208187
@@ -486,7 +485,7 @@ GameObject:
   - component: {fileID: 7563910212847471686}
   - component: {fileID: 3322349023992819620}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Character Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,7 +503,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7747182712484906396}
   m_Father: {fileID: 8948502054214973881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5130034381458739744

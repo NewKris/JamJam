@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ca0af1e5814365a7e08c19d36a905a, type: 3}
+  m_Name: 9_Walter Whiter
+  m_EditorClassIdentifier: 
+  firstBark: Challenge me! The worse the better! But hard
+  repeatingBark: hello hello
+  desiredFlavour:
+    desiredSweetness:
+      level: 0
+      evaluator: 2
+    desiredSourness:
+      level: 0
+      evaluator: 2
+    desiredSaltness:
+      level: 1
+      evaluator: 0
+    desiredBitterness:
+      level: 0
+      evaluator: 2
+    desiredAlcohol:
+      level: 4
+      evaluator: 2
+  satisfactionLoss: 10
+  satisfactionGain: 10
+  isTarget: 0

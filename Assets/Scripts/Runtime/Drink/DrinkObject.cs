@@ -4,7 +4,6 @@ using System.Linq;
 using JamJam.Runtime.Player;
 using JamJam.Runtime.Utility.Attributes;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace JamJam.Runtime.Drink {
     public class DrinkObject : MonoBehaviour {
@@ -12,6 +11,7 @@ namespace JamJam.Runtime.Drink {
         public int maxIngredients = 5;
         public FlavourInfoDisplay drinkInfo;
         public int satisfactionLoss = 25;
+        public Color emptyColor;
         
         [Header("Read Only")]
         [ReadOnly] public float mixAmount;
@@ -65,13 +65,24 @@ namespace JamJam.Runtime.Drink {
             };
         }
 
-        private void UpdateColor() {
-            var freq = ingredients.GroupBy(x => x)
-                .OrderByDescending(x => x.Count())
-                .Select(x => x.Key)
-                .ToList();
+        private void Awake() {
+            UpdateColor();
+        }
 
-            _drinkColor = freq.First().ingredientColor;
+        private void UpdateColor() {
+            if (ingredients.Count == 0) {
+                _drinkColor = emptyColor;
+            }
+            else {
+                var freq = ingredients.GroupBy(x => x)
+                    .OrderByDescending(x => x.Count())
+                    .Select(x => x.Key)
+                    .ToList();
+
+                _drinkColor = freq.First().ingredientColor;
+            }
+            
+            GetComponentInChildren<MeshRenderer>().material.color = _drinkColor;
         }
         
         private bool IsBeer() {

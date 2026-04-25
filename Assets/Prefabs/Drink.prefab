@@ -154,6 +154,7 @@ MonoBehaviour:
   maxIngredients: 6
   drinkInfo: {fileID: 8002034961441685902}
   satisfactionLoss: 25
+  emptyColor: {r: 0.26326093, g: 0.29804477, b: 0.3207547, a: 1}
   mixAmount: 0
   isPoisonous: 0
 --- !u!54 &6871149896860665696
@@ -270,7 +271,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 27ceb21c1cd1e1e4db49cf8da97b6a5c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

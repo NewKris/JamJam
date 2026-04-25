@@ -34,7 +34,7 @@ namespace JamJam.Runtime.Drink {
         }
         
         public void AddIngredient(Ingredient ingredient) {
-            if (_capacity >= maxIngredients) return;
+            if (ingredient.ingredientVolume > 0 && _capacity >= maxIngredients) return;
 
             Debug.Log($"Added ingredient: {ingredient.name}");
             isPoisonous = isPoisonous || ingredient.flavour.isPoison;

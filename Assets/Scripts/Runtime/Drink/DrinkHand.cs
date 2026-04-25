@@ -11,6 +11,13 @@ namespace JamJam.Runtime.Drink {
         private DrinkObject _heldDrink;
 
         private bool HoldingDrink => _heldDrink != null;
+
+        public void DisposeDrink() {
+            if (!HoldingDrink) return;
+            
+            Destroy(_heldDrink.gameObject);
+            _heldDrink = null;
+        }
         
         public void DropDrink() {
             if (!HoldingDrink) return;
@@ -40,6 +47,13 @@ namespace JamJam.Runtime.Drink {
             
             _heldDrink = mixer.CurrentDrink;
             mixer.CurrentDrink = null;
+            _heldDrink.PinDrink(transform);
+        }
+        
+        public void PickUpDrink(DrinkObject drink) {
+            if (HoldingDrink) return;
+            
+            _heldDrink = drink;
             _heldDrink.PinDrink(transform);
         }
 

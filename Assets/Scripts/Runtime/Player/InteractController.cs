@@ -22,6 +22,8 @@ namespace JamJam.Runtime.Player {
         private void TryGrab() {
             if (TryInteract(out GrabInteractable grabInteractable)) {
                 grabInteractable.Grab();
+            } else if (TryInteract(out DrinkObject drinkObject)) {
+                drinkHand.PickUpDrink(drinkObject);
             }
         }
 

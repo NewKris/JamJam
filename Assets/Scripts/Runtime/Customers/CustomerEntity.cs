@@ -5,6 +5,7 @@ using JamJam.Runtime.Drink;
 using JamJam.Runtime.Player;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace JamJam.Runtime.Customers {
     public class CustomerEntity : MonoBehaviour {
@@ -12,10 +13,15 @@ namespace JamJam.Runtime.Customers {
         public ReactionBubble reactionBubble;
         public TextMeshProUGUI speechText;
         public SpriteRenderer spriteRenderer;
+        public Image timerSprite;
 
         private CustomerSeat _assignedSeat;
+        private float _patience;
+        private bool _waiting;
         
         public void EnterBar(CustomerSeat assignedSeat, CustomerData assignedData) {
+            _waiting = true;
+            _patience = assignedData.patienceTime;
             spriteRenderer.sprite = assignedData.sprite;
             _assignedSeat =  assignedSeat;
             _assignedSeat.SeatCustomer(this);
@@ -25,7 +31,19 @@ namespace JamJam.Runtime.Customers {
             StartCoroutine(WalkToSeat());
         }
 
+        public void StopWaiting() {
+            _waiting = false;
+        }
+
+        public void FailDrink() {
+            _waiting = false;
+            SatisfactionManager.DecreaseSatisfaction(data.satisfactionLoss);
+            speechText.transform.parent.gameObject.SetActive(false);
+            reactionBubble.Display(false);
+        }
+
         public void EvaluateDrink(DrinkObject drink) {
+            _waiting = false;
             bool mixed = drink.mixAmount >= 1 || drink.ingredients.Distinct().Count() == 1;
             bool likesFlavour = mixed && data.desiredFlavour.EvaluateFlavour(drink.SumFlavours());
 
@@ -70,6 +88,16 @@ namespace JamJam.Runtime.Customers {
             }
             
             transform.position = end;
+        }
+
+        private void Update() {
+            _patience -= Time.deltaTime;
+            timerSprite.fillAmount = _patience / data.patienceTime;
+
+            if (_waiting && _patience <= 0) {
+                _waiting = false;
+                _assignedSeat.KickCustomer();
+            }
         }
     }
 }

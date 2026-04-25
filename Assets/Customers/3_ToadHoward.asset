@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ca0af1e5814365a7e08c19d36a905a, type: 3}
   m_Name: 3_ToadHoward
   m_EditorClassIdentifier: 
-  firstBark: If you see me with an empty glass, fill me up. Whatever
-  repeatingBark: hello hello
+  firstBark: If you see me with an empty glass, fill me up. Whatever you got.
+  repeatingBark: You! Glass is empty! Fill! Up!
   desiredFlavour:
     desiredSweetness:
       level: 0
@@ -35,3 +35,4 @@ MonoBehaviour:
   satisfactionGain: 10
   isTarget: 0
   sprite: {fileID: 21300000, guid: 10380c9b0adb318419c1424d2c9a4f0d, type: 3}
+  patienceTime: 5

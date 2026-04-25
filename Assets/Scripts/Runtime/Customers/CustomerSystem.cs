@@ -60,11 +60,11 @@ namespace JamJam.Runtime.Customers {
         }
 
         private void SpawnCustomer(CustomerData customer, CustomerSeat seat) {
-            ActiveCustomers.Add(customer);
-            SpawnedCustomers.Add(customer);
-            
             CustomerEntity entity = Instantiate(customerPrefab).GetComponent<CustomerEntity>();
             entity.EnterBar(seat, customer);
+            
+            ActiveCustomers.Add(customer);
+            SpawnedCustomers.Add(customer);
         }
         
         private CustomerSeat TryFindAvailableSeat() {

@@ -18,6 +18,10 @@ namespace JamJam.Runtime.Customers {
             StartCoroutine(PlayServeSequence(drinkObject));
         }
 
+        public void KickCustomer() {
+            StartCoroutine(PlayLeaveSequence());
+        }
+
         public void SeatCustomer(CustomerEntity customer) {
             Available = false;
             CurrentCustomer = customer;
@@ -38,6 +42,8 @@ namespace JamJam.Runtime.Customers {
         private IEnumerator PlayServeSequence(DrinkObject drinkObject) {
             SetCollidersActive(false);
             drinkObject.PinDrink(coaster);
+            CurrentCustomer.StopWaiting();
+            
             yield return new WaitForSeconds(1f);
             
             CurrentCustomer.EvaluateDrink(drinkObject);
@@ -56,6 +62,16 @@ namespace JamJam.Runtime.Customers {
             }
             
             Destroy(drinkObject.gameObject);
+            Available = true;
+        }
+        
+        private IEnumerator PlayLeaveSequence() {
+            SetCollidersActive(false);
+            
+            CurrentCustomer.FailDrink();
+            
+            yield return CurrentCustomer.WalkOut();
+            
             Available = true;
         }
 

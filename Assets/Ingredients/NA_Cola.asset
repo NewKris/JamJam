@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbfdf3a84f342fd938922d93adf29a0, type: 3}
   m_Name: NA_Cola
   m_EditorClassIdentifier: 
+  ingredientVolume: 1
   flavour:
-    sweet: 1
+    sweet: 2
     sour: 0
     salt: 0
     bitter: 0
@@ -21,6 +22,10 @@ MonoBehaviour:
     isPoison: 0
     isBeer: 0
   displayName: Cola
-  description: It's not Pepsi
+  description: 'Sweet and refreshing.
+
+
+    Did you know that cola originally had
+    cocaine in it? People rioted when it was removed, to no one''s surprise.'
   icon: {fileID: 0}
   keyBind: W

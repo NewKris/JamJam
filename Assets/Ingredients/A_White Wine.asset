@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbfdf3a84f342fd938922d93adf29a0, type: 3}
   m_Name: A_White Wine
   m_EditorClassIdentifier: 
+  ingredientVolume: 1
   flavour:
     sweet: 0
-    sour: 1
+    sour: 2
     salt: 0
     bitter: 0
-    alcohol: 0
+    alcohol: 2
     isPoison: 0
     isBeer: 0
-  displayName: 
-  description: 
+  displayName: White Wine
+  description: 'Sour and strong.
+
+
+    Did you know that white wine is actually not
+    white? Madeira wine looks more like room temperature beer.'
   icon: {fileID: 0}
   keyBind: 

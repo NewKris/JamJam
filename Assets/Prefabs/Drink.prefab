@@ -151,10 +151,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients: []
-  mixAmount: 0
-  maxIngredients: 5
+  maxIngredients: 6
   drinkInfo: {fileID: 8002034961441685902}
   satisfactionLoss: 25
+  mixAmount: 0
+  isPoisonous: 0
 --- !u!54 &6871149896860665696
 Rigidbody:
   m_ObjectHideFlags: 0

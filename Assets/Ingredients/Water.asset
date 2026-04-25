@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbfdf3a84f342fd938922d93adf29a0, type: 3}
   m_Name: Water
   m_EditorClassIdentifier: 
+  ingredientVolume: 1
   flavour:
     sweet: -1
     sour: -1
@@ -21,6 +22,10 @@ MonoBehaviour:
     isPoison: 0
     isBeer: 0
   displayName: 
-  description: 
+  description: 'Dillutes the cocktail.
+
+
+    Did you know that frogs are composed
+    of 80% water? '
   icon: {fileID: 0}
   keyBind: 

@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbfdf3a84f342fd938922d93adf29a0, type: 3}
   m_Name: NA_OrangeJuice
   m_EditorClassIdentifier: 
+  ingredientVolume: 1
   flavour:
-    sweet: 1
-    sour: 1
+    sweet: 2
+    sour: 2
     salt: 0
     bitter: 0
     alcohol: 0
     isPoison: 0
     isBeer: 0
-  displayName: 
-  description: 
+  displayName: Orange Juice
+  description: 'Sweet and refreshing.
+
+
+    Did you know that you can make use orange
+    peel to start fires? Napalm won''t work though.'
   icon: {fileID: 0}
   keyBind: 

@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbfdf3a84f342fd938922d93adf29a0, type: 3}
   m_Name: A_Tequila
   m_EditorClassIdentifier: 
+  ingredientVolume: 1
   flavour:
-    sweet: 1
+    sweet: 2
     sour: 0
     salt: 0
     bitter: 0
-    alcohol: 0
+    alcohol: 2
     isPoison: 0
     isBeer: 0
-  displayName: 
-  description: 
+  displayName: Tequila
+  description: 'Sweet and strong.
+
+
+    Did you know that if you drink tequila, everyone
+    goes from a five to an eight?'
   icon: {fileID: 0}
   keyBind: 

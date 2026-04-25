@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using JamJam.Runtime.Drink;
 using JamJam.Runtime.Player;
 using TMPro;
@@ -23,7 +24,8 @@ namespace JamJam.Runtime.Customers {
         }
 
         public void EvaluateDrink(DrinkObject drink) {
-            bool likesFlavour = drink.mixAmount >= 1 && data.desiredFlavour.EvaluateFlavour(drink.SumFlavours());
+            bool mixed = drink.mixAmount >= 1 || drink.ingredients.Distinct().Count() == 1;
+            bool likesFlavour = mixed && data.desiredFlavour.EvaluateFlavour(drink.SumFlavours());
 
             if (likesFlavour) {
                 Debug.Log("Yum!");

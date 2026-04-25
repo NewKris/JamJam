@@ -27,10 +27,19 @@ namespace JamJam.Runtime.Drink {
             _heldDrink.PinDrink(transform);
         }
 
-        public void PickUpDrink(DrinkObject drink) {
-            if (HoldingDrink) return;
+        public void PlaceDrink(Mixer mixer) {
+            if (!HoldingDrink || mixer.CurrentDrink != null) return;
+
+            mixer.CurrentDrink = _heldDrink;
+            _heldDrink.PinDrink(mixer.transform);
+            _heldDrink = null;
+        }
+
+        public void PickUpDrink(Mixer mixer) {
+            if (HoldingDrink || mixer.CurrentDrink == null) return;
             
-            _heldDrink = drink;
+            _heldDrink = mixer.CurrentDrink;
+            mixer.CurrentDrink = null;
             _heldDrink.PinDrink(transform);
         }
 

@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace JamJam.Runtime.Drink {
     public class DrinkObject : MonoBehaviour {
         public List<Ingredient> ingredients;
         public bool containsPoison;
+        public float mixAmount;
         public int maxIngredients = 5;
         
         public void AddIngredient(Ingredient ingredient) {
@@ -22,6 +24,10 @@ namespace JamJam.Runtime.Drink {
             rb.position = transform.position;
             rb.rotation = transform.rotation;
             rb.isKinematic = true;
+        }
+
+        private void Start() {
+            mixAmount = 0;
         }
     }
 }

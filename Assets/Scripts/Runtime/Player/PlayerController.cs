@@ -8,14 +8,17 @@ namespace JamJam.Runtime.Player {
         public static event Action OnRelease;
         public static event Action<int> OnAddIngredient;
         
+        public static bool HoldingMix { get; private set; }
         public static Vector2 DeltaMouse { get; private set; }
 
+        private InputAction _mixAction;
         private InputAction _lookAction;
 
         private InputActionMap ActionMap => InputSystem.actions.actionMaps[0];
         
         private void Awake() {
             _lookAction = ActionMap["Look"];
+            _mixAction = ActionMap["Mix"];
             
             ActionMap["Interact"].performed += _ =>  OnGrab?.Invoke();
             ActionMap["Interact"].canceled += _ =>  OnRelease?.Invoke();
@@ -42,6 +45,7 @@ namespace JamJam.Runtime.Player {
 
         private void Update() {
             DeltaMouse = _lookAction.ReadValue<Vector2>();
+            HoldingMix = _mixAction.ReadValue<float>() > 0f;
         }
     }
 }

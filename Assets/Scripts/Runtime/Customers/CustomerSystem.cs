@@ -11,9 +11,10 @@ namespace JamJam.Runtime.Customers {
         public GameObject customerPrefab;
         public float spawnRate;
         public CustomerSeat[] seats;
-        public CustomerData[] availableCustomers;
+        public CustomerData[] customerOrder;
 
         private int _satisfaction;
+        private int _nextCustomer;
         private float _lastSpawnTime;
 
         public static bool HasSpawnedCustomerBefore(CustomerData data) {
@@ -21,7 +22,8 @@ namespace JamJam.Runtime.Customers {
         }
 
         private void Awake() {
-            SpawnedCustomers = new HashSet<CustomerData>(availableCustomers.Length);
+            _nextCustomer = 0;
+            SpawnedCustomers = new HashSet<CustomerData>(customerOrder.Length);
         }
 
         private void Update() {
@@ -32,25 +34,22 @@ namespace JamJam.Runtime.Customers {
         }
 
         private void TrySpawnCustomer() {
+            if (_nextCustomer >= customerOrder.Length) {
+                return;
+            }
+            
             CustomerSeat seat = TryFindAvailableSeat();
             
             if (seat == null) return;
 
-            SpawnCustomer(FindAvailableCustomer(), seat);
+            SpawnCustomer(customerOrder[_nextCustomer], seat);
+            _nextCustomer++;
         }
 
         private void SpawnCustomer(CustomerData customer, CustomerSeat seat) {
             CustomerEntity entity = Instantiate(customerPrefab).GetComponent<CustomerEntity>();
             entity.EnterBar(seat, customer);
             SpawnedCustomers.Add(customer);
-        }
-        
-        private CustomerData FindAvailableCustomer() {
-            List<CustomerData> inactiveCustomers = availableCustomers
-                .ToList();
-            
-            int i = Random.Range(0, inactiveCustomers.Count);
-            return inactiveCustomers[i];
         }
         
         private CustomerSeat TryFindAvailableSeat() {

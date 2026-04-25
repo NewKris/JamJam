@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Poison
   m_EditorClassIdentifier: 
   ingredientVolume: 0
+  ingredientColor: {r: 1, g: 1, b: 1, a: 1}
   flavour:
     sweet: 0
     sour: 0
@@ -27,4 +28,4 @@ MonoBehaviour:
 
     Did you know that this is poison?'
   icon: {fileID: 0}
-  keyBind: 
+  keyBind: D

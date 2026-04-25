@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: A_White Wine
   m_EditorClassIdentifier: 
   ingredientVolume: 1
+  ingredientColor: {r: 1, g: 1, b: 1, a: 1}
   flavour:
     sweet: 0
     sour: 2
@@ -28,4 +29,4 @@ MonoBehaviour:
     Did you know that white wine is actually not
     white? Madeira wine looks more like room temperature beer.'
   icon: {fileID: 0}
-  keyBind: 
+  keyBind: 6

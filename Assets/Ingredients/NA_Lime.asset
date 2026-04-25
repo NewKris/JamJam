@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: NA_Lime
   m_EditorClassIdentifier: 
   ingredientVolume: 1
+  ingredientColor: {r: 1, g: 1, b: 1, a: 1}
   flavour:
     sweet: 0
     sour: 2
@@ -28,4 +29,4 @@ MonoBehaviour:
     Did you know that not all lime are citruses?
     The Wild Lime is actually more closely related to Sichuan Pepper.'
   icon: {fileID: 0}
-  keyBind: 
+  keyBind: E

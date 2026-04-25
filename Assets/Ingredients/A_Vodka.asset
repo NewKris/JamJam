@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: A_Vodka
   m_EditorClassIdentifier: 
   ingredientVolume: 1
+  ingredientColor: {r: 1, g: 1, b: 1, a: 1}
   flavour:
     sweet: 0
     sour: 0
@@ -28,4 +29,4 @@ MonoBehaviour:
     Did you know that Vodka actually means "a
     small water" in Russian?'
   icon: {fileID: 0}
-  keyBind: 
+  keyBind: 1

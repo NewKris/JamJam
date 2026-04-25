@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: A_Gin
   m_EditorClassIdentifier: 
   ingredientVolume: 1
+  ingredientColor: {r: 1, g: 1, b: 1, a: 1}
   flavour:
     sweet: 0
     sour: 0
@@ -25,4 +26,4 @@ MonoBehaviour:
   description: "Clear, bitter and strong. \n\nDid you know that Gin originated as
     a medicinal liquor made by monks and alchemists?"
   icon: {fileID: 0}
-  keyBind: 
+  keyBind: 2

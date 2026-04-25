@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Beer
   m_EditorClassIdentifier: 
   ingredientVolume: 1
+  ingredientColor: {r: 1, g: 1, b: 1, a: 1}
   flavour:
     sweet: 0
     sour: 0
@@ -28,4 +29,4 @@ MonoBehaviour:
     Did you know that a frog will drink anything with
     beer in it when drunk enough?'
   icon: {fileID: 0}
-  keyBind: 
+  keyBind: S

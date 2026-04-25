@@ -28,6 +28,7 @@ namespace JamJam.Runtime.Player {
         private void Awake() {
             Instance = this;
             SatisfactionLevel = startSatisfaction;
+            satisfactionSlider.value = SatisfactionLevel;
         }
     }
 }

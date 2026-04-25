@@ -17,7 +17,7 @@ namespace JamJam.Runtime.Customers {
             _assignedSeat =  assignedSeat;
             _assignedSeat.SeatCustomer(this);
             data = assignedData;
-            speechText.text = data.barks[0];
+            speechText.text = CustomerSystem.HasSpawnedCustomerBefore(data) ? data.repeatingBark : data.firstBark;
             
             StartCoroutine(WalkToSeat());
         }

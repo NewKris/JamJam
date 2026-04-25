@@ -1,4 +1,5 @@
 ﻿using System;
+using JamJam.Runtime.Customers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -23,6 +24,10 @@ namespace JamJam.Runtime.Player {
         public static void IncreaseSatisfaction(int amount) {
             SatisfactionLevel += Mathf.Abs(amount);
             Instance.satisfactionSlider.value = SatisfactionLevel;
+
+            if (SatisfactionLevel >= 100) {
+                CustomerSystem.AddFinalBoss();
+            }
         }
         
         private void Awake() {

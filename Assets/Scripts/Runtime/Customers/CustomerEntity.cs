@@ -55,6 +55,7 @@ namespace JamJam.Runtime.Customers {
             
             transform.position = end;
             Destroy(gameObject);
+            CustomerSystem.DeSpawnCustomer(data);
         }
 
         private IEnumerator WalkToSeat() {

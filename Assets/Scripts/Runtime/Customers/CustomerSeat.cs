@@ -57,8 +57,6 @@ namespace JamJam.Runtime.Customers {
             
             Destroy(drinkObject.gameObject);
             Available = true;
-            
-            CustomerSystem.TryEndParty();
         }
 
         private void SetCollidersActive(bool active) {

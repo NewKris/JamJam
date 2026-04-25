@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cola
   m_EditorClassIdentifier: 
   flavour:
-    sweet: 2
+    sweet: 3
     sour: 1
     salt: 3
     bitter: 2

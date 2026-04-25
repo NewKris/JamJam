@@ -10,6 +10,8 @@ namespace JamJam.Runtime.Drink {
         public float mixAmount;
         public int maxIngredients = 5;
         public FlavourInfoDisplay drinkInfo;
+        
+        public bool HasIngredients => ingredients.Count > 0;
 
         public void SetInfoPanelActive(bool isActive) {
             drinkInfo.gameObject.SetActive(isActive);

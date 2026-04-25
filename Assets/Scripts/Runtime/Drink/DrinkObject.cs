@@ -41,6 +41,7 @@ namespace JamJam.Runtime.Drink {
             _capacity += ingredient.ingredientVolume;
             ingredients.Add(ingredient);
             drinkInfo.UpdateDisplay(SumFlavours());
+            UpdateColor();
         }
         
         public void PinDrink(Transform target) {
@@ -64,6 +65,15 @@ namespace JamJam.Runtime.Drink {
             };
         }
 
+        private void UpdateColor() {
+            var freq = ingredients.GroupBy(x => x)
+                .OrderByDescending(x => x.Count())
+                .Select(x => x.Key)
+                .ToList();
+
+            _drinkColor = freq.First().ingredientColor;
+        }
+        
         private bool IsBeer() {
             return ingredients.Any(x => x.flavour.isBeer);
         }

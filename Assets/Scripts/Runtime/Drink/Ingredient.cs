@@ -4,6 +4,7 @@ namespace JamJam.Runtime.Drink {
     [CreateAssetMenu(menuName = "Ingredient")]
     public class Ingredient : ScriptableObject {
         public int ingredientVolume = 1;
+        public Color ingredientColor = Color.white;
         public Flavour flavour;
 
         [Header("Info")] 

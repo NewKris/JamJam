@@ -4850,7 +4850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2f03c138f34d85966079a26f10a1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 40
+  sensitivity: 60
   axisScaling: {x: 1, y: 1}
   mouseSmoothing: 0.01
   minPitchAngle: -70

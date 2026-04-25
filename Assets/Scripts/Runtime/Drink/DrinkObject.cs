@@ -23,9 +23,9 @@ namespace JamJam.Runtime.Drink {
         public bool HasIngredients => ingredients.Count > 0;
 
         public void Break() {
-            Debug.Log("!");
             SatisfactionManager.DecreaseSatisfaction(satisfactionLoss);
             Destroy(gameObject);
+            VfxPlayer.TriggerCrash();
         }
         
         public void SetInfoPanelActive(bool isActive) {

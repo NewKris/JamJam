@@ -11,14 +11,25 @@ namespace JamJam.Runtime.Customers {
         public void EnterBar(CustomerSeat assignedSeat, CustomerData assignedData) {
             _assignedSeat =  assignedSeat;
             _assignedSeat.Available = false;
+            _assignedSeat.CurrentCustomer = this;
             data = assignedData;
             
             StartCoroutine(WalkToSeat());
         }
-
-        public void LeaveBar() {
-            _assignedSeat.Available = true;
-            StartCoroutine(WalkOut());
+        
+        public IEnumerator WalkOut() {
+            Vector3 start = _assignedSeat.SeatPos;
+            Vector3 end = _assignedSeat.SpawnStart;
+            
+            transform.position = start;
+            
+            for (float t = 0; t < 2; t += Time.deltaTime) {
+                transform.position = Vector3.Lerp(start, end, t / 2);
+                yield return null;
+            }
+            
+            transform.position = end;
+            Destroy(gameObject);
         }
 
         private IEnumerator WalkToSeat() {
@@ -33,21 +44,6 @@ namespace JamJam.Runtime.Customers {
             }
             
             transform.position = end;
-        }
-        
-        private IEnumerator WalkOut() {
-            Vector3 start = _assignedSeat.SeatPos;
-            Vector3 end = _assignedSeat.SpawnStart;
-            
-            transform.position = start;
-            
-            for (float t = 0; t < 2; t += Time.deltaTime) {
-                transform.position = Vector3.Lerp(start, end, t / 2);
-                yield return null;
-            }
-            
-            transform.position = end;
-            Destroy(gameObject);
         }
     }
 }

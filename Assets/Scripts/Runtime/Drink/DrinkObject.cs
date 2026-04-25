@@ -13,5 +13,15 @@ namespace JamJam.Runtime.Drink {
             Debug.Log($"Added ingredient: {ingredient.name}");
             ingredients.Add(ingredient);
         }
+        
+        public void PinDrink(Transform target) {
+            Rigidbody rb = GetComponent<Rigidbody>();
+            
+            transform.SetParent(target);
+            transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+            rb.position = transform.position;
+            rb.rotation = transform.rotation;
+            rb.isKinematic = true;
+        }
     }
 }

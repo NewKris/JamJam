@@ -1,4 +1,5 @@
 ﻿using System;
+using JamJam.Runtime.Customers;
 using JamJam.Runtime.Player;
 using UnityEngine;
 
@@ -23,14 +24,21 @@ namespace JamJam.Runtime.Drink {
             if (HoldingDrink) return;
             
             _heldDrink = Instantiate(drinkPrefab).GetComponent<DrinkObject>();
-            PinDrink();
+            _heldDrink.PinDrink(transform);
         }
 
         public void PickUpDrink(DrinkObject drink) {
             if (HoldingDrink) return;
             
             _heldDrink = drink;
-            PinDrink();
+            _heldDrink.PinDrink(transform);
+        }
+
+        public void ServeDrink(CustomerSeat seat) {
+            if (!HoldingDrink) return;
+
+            seat.ServeDrink(_heldDrink);
+            _heldDrink = null;
         }
 
         private void Awake() {
@@ -45,16 +53,6 @@ namespace JamJam.Runtime.Drink {
             if (!HoldingDrink) return;
             
             _heldDrink.AddIngredient(ingredients[ingredientIndex]);
-        }
-
-        private void PinDrink() {
-            Rigidbody rb = _heldDrink.GetComponent<Rigidbody>();
-            
-            _heldDrink.transform.SetParent(transform);
-            _heldDrink.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
-            rb.position = _heldDrink.transform.position;
-            rb.rotation = _heldDrink.transform.rotation;
-            rb.isKinematic = true;
         }
     }
 }

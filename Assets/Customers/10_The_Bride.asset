@@ -30,6 +30,8 @@ MonoBehaviour:
     desiredAlcohol:
       level: 6
       evaluator: 2
+    wantBeer: 0
   satisfactionLoss: 40
   satisfactionGain: 20
   isTarget: 1
+  sprite: {fileID: 21300000, guid: 10380c9b0adb318419c1424d2c9a4f0d, type: 3}

@@ -11,10 +11,12 @@ namespace JamJam.Runtime.Customers {
         public CustomerData data;
         public ReactionBubble reactionBubble;
         public TextMeshProUGUI speechText;
+        public SpriteRenderer spriteRenderer;
 
         private CustomerSeat _assignedSeat;
         
         public void EnterBar(CustomerSeat assignedSeat, CustomerData assignedData) {
+            spriteRenderer.sprite = assignedData.sprite;
             _assignedSeat =  assignedSeat;
             _assignedSeat.SeatCustomer(this);
             data = assignedData;
@@ -36,6 +38,7 @@ namespace JamJam.Runtime.Customers {
                 SatisfactionManager.DecreaseSatisfaction(data.satisfactionLoss);
             }
             
+            speechText.transform.parent.gameObject.SetActive(false);
             reactionBubble.Display(likesFlavour);
         }
         

@@ -23,9 +23,11 @@ namespace JamJam.Runtime.Customers {
             bool likesFlavour = drink.mixAmount >= 1 && data.desiredFlavour.EvaluateFlavour(drink.SumFlavours());
 
             if (likesFlavour) {
+                Debug.Log("Yum!");
                 SatisfactionManager.IncreaseSatisfaction(data.satisfactionGain);
             }
             else {
+                Debug.Log("Eww!");
                 SatisfactionManager.DecreaseSatisfaction(data.satisfactionLoss);
             }
             

@@ -43,8 +43,19 @@ namespace JamJam.Runtime.Customers {
             CurrentCustomer.EvaluateDrink(drinkObject);
             
             yield return CurrentCustomer.WalkOut();
-            Destroy(drinkObject.gameObject);
-            Available = true;
+
+            if (drinkObject.isPoisonous) {
+                if (CurrentCustomer.data.isTarget) {
+                    GameManager.Win();
+                }
+                else {
+                    GameManager.Lose("You poisoned the wrong target!");
+                }
+            }
+            else {
+                Destroy(drinkObject.gameObject);
+                Available = true;
+            }
         }
 
         private void SetCollidersActive(bool active) {

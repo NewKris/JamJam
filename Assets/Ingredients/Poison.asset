@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbfdf3a84f342fd938922d93adf29a0, type: 3}
   m_Name: Poison
   m_EditorClassIdentifier: 
+  isPoisonous: 0
+  ingredientVolume: 1
   flavour:
     sweet: -1
     sour: -1
     salt: -1
     bitter: -1
     alcohol: -1
-    isPoison: 0
+    isPoison: 1
     isBeer: 0
   displayName: 
   description: 

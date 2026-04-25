@@ -31,3 +31,4 @@ MonoBehaviour:
       evaluator: 2
   satisfactionLoss: 25
   satisfactionGain: 10
+  isTarget: 1

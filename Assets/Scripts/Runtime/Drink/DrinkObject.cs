@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using JamJam.Runtime.Player;
+using JamJam.Runtime.Utility.Attributes;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace JamJam.Runtime.Drink {
     public class DrinkObject : MonoBehaviour {
         public List<Ingredient> ingredients;
-        public float mixAmount;
         public int maxIngredients = 5;
         public FlavourInfoDisplay drinkInfo;
         public int satisfactionLoss = 25;
+        
+        [Header("Read Only")]
+        [ReadOnly] public float mixAmount;
+        [ReadOnly] public bool isPoisonous;
 
         private int _capacity = 0;
         
@@ -32,6 +36,7 @@ namespace JamJam.Runtime.Drink {
             if (_capacity >= maxIngredients) return;
 
             Debug.Log($"Added ingredient: {ingredient.name}");
+            isPoisonous = isPoisonous || ingredient.flavour.isPoison;
             _capacity += ingredient.ingredientVolume;
             ingredients.Add(ingredient);
             drinkInfo.UpdateDisplay(SumFlavours());

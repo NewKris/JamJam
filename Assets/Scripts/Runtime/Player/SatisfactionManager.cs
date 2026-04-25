@@ -15,7 +15,7 @@ namespace JamJam.Runtime.Player {
             Instance.satisfactionSlider.value = SatisfactionLevel;
 
             if (SatisfactionLevel <= 0) {
-                SceneManager.LoadScene("Game Over");
+                GameManager.Lose("Your customers stormed out!");
             }
         }
 

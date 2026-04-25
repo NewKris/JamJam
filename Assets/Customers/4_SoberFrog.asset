@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ca0af1e5814365a7e08c19d36a905a, type: 3}
+  m_Name: 4_SoberFrog
+  m_EditorClassIdentifier: 
+  firstBark: 'Hi! Do you have any non-alcoholic drinks? A little bit of everything,
+    but not so sour. '
+  repeatingBark: hello hello
+  desiredFlavour:
+    desiredSweetness:
+      level: 1
+      evaluator: 2
+    desiredSourness:
+      level: 1
+      evaluator: 0
+    desiredSaltness:
+      level: 1
+      evaluator: 0
+    desiredBitterness:
+      level: 1
+      evaluator: 2
+    desiredAlcohol:
+      level: 0
+      evaluator: 0
+    wantBeer: 0
+  satisfactionLoss: 20
+  satisfactionGain: 20
+  isTarget: 0

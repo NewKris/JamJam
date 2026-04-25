@@ -22,6 +22,10 @@ MonoBehaviour:
     isPoison: 0
     isBeer: 1
   displayName: 
-  description: Just beer.
+  description: 'Just beer.
+
+
+    Did you know that a frog will drink anything with
+    beer in it when drunk enough?'
   icon: {fileID: 0}
   keyBind: 

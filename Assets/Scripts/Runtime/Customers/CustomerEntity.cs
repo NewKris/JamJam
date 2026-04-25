@@ -31,13 +31,19 @@ namespace JamJam.Runtime.Customers {
             StartCoroutine(WalkToSeat());
         }
 
+        public void StopWaiting() {
+            _waiting = false;
+        }
+
         public void FailDrink() {
+            _waiting = false;
             SatisfactionManager.DecreaseSatisfaction(data.satisfactionLoss);
             speechText.transform.parent.gameObject.SetActive(false);
             reactionBubble.Display(false);
         }
 
         public void EvaluateDrink(DrinkObject drink) {
+            _waiting = false;
             bool mixed = drink.mixAmount >= 1 || drink.ingredients.Distinct().Count() == 1;
             bool likesFlavour = mixed && data.desiredFlavour.EvaluateFlavour(drink.SumFlavours());
 

@@ -42,6 +42,8 @@ namespace JamJam.Runtime.Customers {
         private IEnumerator PlayServeSequence(DrinkObject drinkObject) {
             SetCollidersActive(false);
             drinkObject.PinDrink(coaster);
+            CurrentCustomer.StopWaiting();
+            
             yield return new WaitForSeconds(1f);
             
             CurrentCustomer.EvaluateDrink(drinkObject);

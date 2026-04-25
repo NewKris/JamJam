@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 96058188}
   - component: {fileID: 96058189}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Satisfaction Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,6 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   satisfactionSlider: {fileID: 96058188}
+  startSatisfaction: 50
 --- !u!1 &126316164
 GameObject:
   m_ObjectHideFlags: 0

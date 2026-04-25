@@ -11,5 +11,6 @@ namespace JamJam.Runtime.Customers {
         public int satisfactionGain;
         public bool isTarget;
         public Sprite sprite;
+        public float patienceTime;
     }
 }

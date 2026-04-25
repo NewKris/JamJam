@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using JamJam.Runtime.Player;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,9 +11,16 @@ namespace JamJam.Runtime.Drink {
         public float mixAmount;
         public int maxIngredients = 5;
         public FlavourInfoDisplay drinkInfo;
+        public int satisfactionLoss = 25;
         
         public bool HasIngredients => ingredients.Count > 0;
 
+        public void Break() {
+            Debug.Log("!");
+            SatisfactionManager.DecreaseSatisfaction(satisfactionLoss);
+            Destroy(gameObject);
+        }
+        
         public void SetInfoPanelActive(bool isActive) {
             drinkInfo.gameObject.SetActive(isActive);
             drinkInfo.UpdateDisplay(SumFlavours());

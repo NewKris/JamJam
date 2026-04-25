@@ -154,6 +154,7 @@ MonoBehaviour:
   mixAmount: 0
   maxIngredients: 5
   drinkInfo: {fileID: 8002034961441685902}
+  satisfactionLoss: 25
 --- !u!54 &6871149896860665696
 Rigidbody:
   m_ObjectHideFlags: 0

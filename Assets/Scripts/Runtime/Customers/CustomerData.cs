@@ -6,5 +6,7 @@ namespace JamJam.Runtime.Customers {
     public class CustomerData : ScriptableObject {
         public string[] barks;
         public Flavour desiredFlavour;
+        public int satisfactionLoss;
+        public int satisfactionGain;
     }
 }

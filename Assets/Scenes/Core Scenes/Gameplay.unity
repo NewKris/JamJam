@@ -2410,6 +2410,100 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &845499381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845499385}
+  - component: {fileID: 845499384}
+  - component: {fileID: 845499383}
+  - component: {fileID: 845499382}
+  m_Layer: 6
+  m_Name: Kill box
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!114 &845499382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845499381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25cf83828e349f2ba34053bf9c39e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &845499383
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845499381}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &845499384
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845499381}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.78, y: 1, z: 25.97}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &845499385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845499381}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &859410108
 GameObject:
   m_ObjectHideFlags: 0
@@ -4287,7 +4381,7 @@ GameObject:
   - component: {fileID: 1792609947}
   - component: {fileID: 1792609951}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Cola Bottles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5200,7 +5294,7 @@ MonoBehaviour:
   maxInteractDistance: 10
   interactMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   drinkHand: {fileID: 80773293}
 --- !u!114 &8103534495648822144
 MonoBehaviour:
@@ -5216,7 +5310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientInfoLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   infoDisplay: {fileID: 805342091}
 --- !u!222 &8588858374336100147
 CanvasRenderer:
@@ -5243,6 +5337,7 @@ SceneRoots:
   - {fileID: 398846614}
   - {fileID: 1161715479}
   - {fileID: 527538384}
+  - {fileID: 845499385}
   - {fileID: 272698628}
   - {fileID: 6733002183481672126}
   - {fileID: 757393925}

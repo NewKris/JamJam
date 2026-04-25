@@ -11,7 +11,7 @@ namespace JamJam.Runtime.Player {
         public Slider satisfactionSlider;
         
         public static void DecreaseSatisfaction(int amount) {
-            SatisfactionLevel -= amount;
+            SatisfactionLevel -= Mathf.Abs(amount);
             Instance.satisfactionSlider.value = SatisfactionLevel;
 
             if (SatisfactionLevel <= 0) {
@@ -20,7 +20,7 @@ namespace JamJam.Runtime.Player {
         }
 
         public static void IncreaseSatisfaction(int amount) {
-            SatisfactionLevel  += amount;
+            SatisfactionLevel += Mathf.Abs(amount);
             Instance.satisfactionSlider.value = SatisfactionLevel;
         }
         

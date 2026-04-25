@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 namespace JamJam.Runtime.Customers {
     public class CustomerSystem : MonoBehaviour {
         private static HashSet<CustomerData> SpawnedCustomers;
+        private static CustomerSystem Instance;
         
         public GameObject customerPrefab;
         public float spawnRate;
@@ -17,11 +18,18 @@ namespace JamJam.Runtime.Customers {
         private int _nextCustomer;
         private float _lastSpawnTime;
 
+        public static void TryEndParty() {
+            if (Instance._nextCustomer >= Instance.customerOrder.Length && Instance.seats.All(x => x.Available)) {
+                GameManager.Lose("The wedding is over. You missed your shot...");
+            }
+        }
+        
         public static bool HasSpawnedCustomerBefore(CustomerData data) {
             return SpawnedCustomers.Contains(data);
         }
 
         private void Awake() {
+            Instance = this;
             _nextCustomer = 0;
             SpawnedCustomers = new HashSet<CustomerData>(customerOrder.Length);
         }

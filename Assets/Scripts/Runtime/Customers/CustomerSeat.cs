@@ -47,15 +47,18 @@ namespace JamJam.Runtime.Customers {
             if (drinkObject.isPoisonous) {
                 if (CurrentCustomer.data.isTarget) {
                     GameManager.Win();
+                    yield break;
                 }
                 else {
                     GameManager.Lose("You poisoned the wrong target!");
+                    yield break;
                 }
             }
-            else {
-                Destroy(drinkObject.gameObject);
-                Available = true;
-            }
+            
+            Destroy(drinkObject.gameObject);
+            Available = true;
+            
+            CustomerSystem.TryEndParty();
         }
 
         private void SetCollidersActive(bool active) {

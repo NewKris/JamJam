@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstBark: "I\u2019ve been sober for 10 years, and I\u2019ve really got the itch
     now. Can you help me out?"
-  repeatingBark: hello hello
+  repeatingBark: Whatever to quench my thirst. But absolutely no alcohol, you hear?
   desiredFlavour:
     desiredSweetness:
       level: 1

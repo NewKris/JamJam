@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstBark: 'Hi! Do you have any non-alcoholic drinks? A little bit of everything,
     but not so sour. '
-  repeatingBark: hello hello
+  repeatingBark: Hello again. A soda or mocktail please. No orange juice though.
   desiredFlavour:
     desiredSweetness:
       level: 1

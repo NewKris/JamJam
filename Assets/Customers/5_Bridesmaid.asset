@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstBark: 'My bestie just got married! She wants me to get her a Marquisette.
     Gimme! '
-  repeatingBark: hello hello
+  repeatingBark: Marquiiiiiisette!!!!!
   desiredFlavour:
     desiredSweetness:
       level: 4

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 7_Walter White
   m_EditorClassIdentifier: 
   firstBark: 'I want something sour, sweet and pink! '
-  repeatingBark: hello hello
+  repeatingBark: One negroni, please.
   desiredFlavour:
     desiredSweetness:
       level: 4

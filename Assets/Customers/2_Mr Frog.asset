@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstBark: "So\u2026 whose wedding is this? My sister is never gonna forgive me
     for missing her big day. I\u2026 Give me something bitter, and strong."
-  repeatingBark: hello hello
+  repeatingBark: Actually, this wedding is better. Give me a Vodka, or Gin, please.
   desiredFlavour:
     desiredSweetness:
       level: 1

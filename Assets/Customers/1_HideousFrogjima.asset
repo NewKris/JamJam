@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1_HideousFrogjima
   m_EditorClassIdentifier: 
   firstBark: I don't want anything fancy. Just beer.
-  repeatingBark: hello hello
+  repeatingBark: Beer.
   desiredFlavour:
     desiredSweetness:
       level: 0

@@ -13,3 +13,21 @@ MonoBehaviour:
   m_Name: Genghis Khan
   m_EditorClassIdentifier: 
   barks: []
+  desiredFlavour:
+    desiredSweetness:
+      level: 3
+      evaluator: 1
+    desiredSourness:
+      level: 1
+      evaluator: 0
+    desiredSaltness:
+      level: 3
+      evaluator: 0
+    desiredBitterness:
+      level: 2
+      evaluator: 2
+    desiredAlcohol:
+      level: 2
+      evaluator: 2
+  satisfactionLoss: 25
+  satisfactionGain: 10

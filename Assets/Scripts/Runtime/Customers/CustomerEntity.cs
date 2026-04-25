@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections;
+using JamJam.Runtime.Drink;
+using JamJam.Runtime.Player;
 using UnityEngine;
 
 namespace JamJam.Runtime.Customers {
     public class CustomerEntity : MonoBehaviour {
         public CustomerData data;
+        public ReactionBubble reactionBubble;
 
         private CustomerSeat _assignedSeat;
         
@@ -14,6 +17,19 @@ namespace JamJam.Runtime.Customers {
             data = assignedData;
             
             StartCoroutine(WalkToSeat());
+        }
+
+        public void EvaluateDrink(DrinkObject drink) {
+            bool likesFlavour = drink.mixAmount >= 1 && data.desiredFlavour.EvaluateFlavour(drink.SumFlavours());
+
+            if (likesFlavour) {
+                SatisfactionManager.IncreaseSatisfaction(data.satisfactionGain);
+            }
+            else {
+                SatisfactionManager.DecreaseSatisfaction(data.satisfactionLoss);
+            }
+            
+            reactionBubble.Display(likesFlavour);
         }
         
         public IEnumerator WalkOut() {

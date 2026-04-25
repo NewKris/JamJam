@@ -39,6 +39,9 @@ namespace JamJam.Runtime.Customers {
             SetCollidersActive(false);
             drinkObject.PinDrink(coaster);
             yield return new WaitForSeconds(1f);
+            
+            CurrentCustomer.EvaluateDrink(drinkObject);
+            
             yield return CurrentCustomer.WalkOut();
             Destroy(drinkObject.gameObject);
             Available = true;

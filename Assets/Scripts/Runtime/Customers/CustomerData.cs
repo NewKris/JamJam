@@ -5,7 +5,7 @@ namespace JamJam.Runtime.Customers {
     [CreateAssetMenu(menuName = "Customer Data")]
     public class CustomerData : ScriptableObject {
         public string[] barks;
-        public Flavour desiredFlavour;
+        public CustomerRequest desiredFlavour;
         public int satisfactionLoss;
         public int satisfactionGain;
     }

@@ -44,7 +44,7 @@ namespace JamJam.Runtime.Drink {
             rb.isKinematic = true;
         }
 
-        private Flavour SumFlavours() {
+        public Flavour SumFlavours() {
             return new Flavour() {
                 sweet = GetTotalSweetness(),
                 sour = GetTotalSourness(),

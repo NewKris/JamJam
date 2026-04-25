@@ -15,9 +15,5 @@ namespace JamJam.Runtime.Drink {
         [Header("Booleans")]
         public bool isPoison;
         public bool isBeer;
-
-        public static bool EvaluateFlavour(Flavour desired, Flavour actual) {
-            return true;
-        }
     }
 }

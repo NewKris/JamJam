@@ -16,8 +16,10 @@ namespace JamJam.Runtime.Drink {
         [Header("Read Only")]
         [ReadOnly] public float mixAmount;
         [ReadOnly] public bool isPoisonous;
+        [ReadOnly] public bool isBeer;
 
         private int _capacity = 0;
+        private Color _drinkColor;
         
         public bool HasIngredients => ingredients.Count > 0;
 
@@ -37,6 +39,7 @@ namespace JamJam.Runtime.Drink {
 
             Debug.Log($"Added ingredient: {ingredient.name}");
             isPoisonous = isPoisonous || ingredient.flavour.isPoison;
+            isBeer = isBeer || ingredient.flavour.isBeer;
             _capacity += ingredient.ingredientVolume;
             ingredients.Add(ingredient);
             drinkInfo.UpdateDisplay(SumFlavours());

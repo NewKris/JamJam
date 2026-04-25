@@ -10,13 +10,18 @@ namespace JamJam.Runtime.Customers {
         public DesiredFlavour desiredSaltness;
         public DesiredFlavour desiredBitterness;
         public DesiredFlavour desiredAlcohol;
+        public bool wantBeer;
         
-        public bool EvaluateFlavour(Flavour desired) {
-            return desiredSweetness.Evaluate(desired.sweet)
-                &&  desiredSourness.Evaluate(desired.sour)
-                &&  desiredSaltness.Evaluate(desired.salt)
-                &&  desiredBitterness.Evaluate(desired.bitter)
-                &&  desiredAlcohol.Evaluate(desired.alcohol);
+        public bool EvaluateFlavour(Flavour actual) {
+            if (wantBeer) {
+                return actual.isBeer;
+            }
+            
+            return desiredSweetness.Evaluate(actual.sweet)
+                &&  desiredSourness.Evaluate(actual.sour)
+                &&  desiredSaltness.Evaluate(actual.salt)
+                &&  desiredBitterness.Evaluate(actual.bitter)
+                &&  desiredAlcohol.Evaluate(actual.alcohol);
         }
     }
 

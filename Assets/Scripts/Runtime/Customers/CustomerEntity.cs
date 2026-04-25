@@ -2,12 +2,14 @@
 using System.Collections;
 using JamJam.Runtime.Drink;
 using JamJam.Runtime.Player;
+using TMPro;
 using UnityEngine;
 
 namespace JamJam.Runtime.Customers {
     public class CustomerEntity : MonoBehaviour {
         public CustomerData data;
         public ReactionBubble reactionBubble;
+        public TextMeshProUGUI speechText;
 
         private CustomerSeat _assignedSeat;
         
@@ -15,6 +17,7 @@ namespace JamJam.Runtime.Customers {
             _assignedSeat =  assignedSeat;
             _assignedSeat.SeatCustomer(this);
             data = assignedData;
+            speechText.text = data.barks[0];
             
             StartCoroutine(WalkToSeat());
         }

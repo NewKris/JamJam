@@ -20,3 +20,6 @@ MonoBehaviour:
     alcohol: 0
     isPoison: 0
     isBeer: 0
+  displayName: Lime
+  description: stuff
+  icon: {fileID: 0}

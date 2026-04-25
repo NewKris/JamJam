@@ -20,3 +20,7 @@ MonoBehaviour:
     alcohol: 2
     isPoison: 0
     isBeer: 0
+  displayName: Cola
+  description: It's not Pepsi
+  icon: {fileID: 0}
+  keyBind: W

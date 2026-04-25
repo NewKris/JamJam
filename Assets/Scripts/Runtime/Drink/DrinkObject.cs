@@ -7,14 +7,13 @@ using UnityEngine.Events;
 namespace JamJam.Runtime.Drink {
     public class DrinkObject : MonoBehaviour {
         public List<Ingredient> ingredients;
-        public bool containsPoison;
         public float mixAmount;
         public int maxIngredients = 5;
-        public GameObject infoPanel;
-        public UnityEvent onIngredientAdded;
+        public FlavourInfoDisplay drinkInfo;
 
         public void SetInfoPanelActive(bool isActive) {
-            infoPanel.SetActive(isActive);
+            drinkInfo.gameObject.SetActive(isActive);
+            drinkInfo.UpdateDisplay(SumFlavours());
         }
         
         public void AddIngredient(Ingredient ingredient) {
@@ -22,7 +21,7 @@ namespace JamJam.Runtime.Drink {
             
             Debug.Log($"Added ingredient: {ingredient.name}");
             ingredients.Add(ingredient);
-            onIngredientAdded.Invoke();
+            drinkInfo.UpdateDisplay(SumFlavours());
         }
         
         public void PinDrink(Transform target) {
@@ -35,23 +34,33 @@ namespace JamJam.Runtime.Drink {
             rb.isKinematic = true;
         }
 
-        public int GetTotalSweetness() {
+        private Flavour SumFlavours() {
+            return new Flavour() {
+                sweet = GetTotalSweetness(),
+                sour = GetTotalSourness(),
+                salt = GetTotalSaltiness(),
+                bitter = GetTotalBitterness(),
+                alcohol = GetTotalAlcohol()
+            };
+        }
+
+        private int GetTotalSweetness() {
             return ingredients.Select(x => x.flavour.sweet).Sum();
         }
         
-        public int GetTotalSourness() {
+        private int GetTotalSourness() {
             return ingredients.Select(x => x.flavour.sour).Sum();
         }
         
-        public int GetTotalSaltiness() {
+        private int GetTotalSaltiness() {
             return ingredients.Select(x => x.flavour.salt).Sum();
         }
         
-        public int GetTotalBitterness() {
+        private int GetTotalBitterness() {
             return ingredients.Select(x => x.flavour.bitter).Sum();
         }
         
-        public int GetTotalAlcohol() {
+        private int GetTotalAlcohol() {
             return ingredients.Select(x => x.flavour.alcohol).Sum();
         }
 

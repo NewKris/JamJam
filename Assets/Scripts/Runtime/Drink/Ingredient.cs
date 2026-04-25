@@ -9,5 +9,6 @@ namespace JamJam.Runtime.Drink {
         public string displayName;
         [TextArea] public string description;
         public Sprite icon;
+        public string keyBind;
     }
 }

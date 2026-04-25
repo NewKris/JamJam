@@ -36,6 +36,7 @@ namespace JamJam.Runtime.Customers {
         private void Awake() {
             Instance = this;
             SpawnedCustomers = new HashSet<CustomerData>(customerPool.Count);
+            ActiveCustomers = new HashSet<CustomerData>(customerPool.Count);
         }
 
         private void Update() {

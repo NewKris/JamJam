@@ -1347,7 +1347,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 14c4239692c164949860a02be17227c3, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1355,7 +1355,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &543711856
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2159,8 +2159,17 @@ MonoBehaviour:
   spawnRate: 2
   seats:
   - {fileID: 541016060}
-  customerPool: []
-  finalBoss: {fileID: 0}
+  customerPool:
+  - {fileID: 11400000, guid: 5a054863c10a54d4386a4f23a1948347, type: 2}
+  - {fileID: 11400000, guid: 089df46fb8209c549a9ab41717332c8a, type: 2}
+  - {fileID: 11400000, guid: b31e546db8c13a64899b2a49e8a0a5e4, type: 2}
+  - {fileID: 11400000, guid: 4c68b0d791af34a1386f97d217d99b76, type: 2}
+  - {fileID: 11400000, guid: 1a6e74ddb87342d4b87951752e3f6ff3, type: 2}
+  - {fileID: 11400000, guid: 0871a7e7ca54747afbc233c7b4c09142, type: 2}
+  - {fileID: 11400000, guid: 3fd4c48033b42c74f9dabf889d289380, type: 2}
+  - {fileID: 11400000, guid: f8394cea4581f40f2a09fe57adf91792, type: 2}
+  - {fileID: 11400000, guid: 110614aac31dc436db68f502aa94d4ab, type: 2}
+  finalBoss: {fileID: 11400000, guid: 41fde191563c1ae488bdfb589e27d8fe, type: 2}
 --- !u!1 &805342089
 GameObject:
   m_ObjectHideFlags: 0

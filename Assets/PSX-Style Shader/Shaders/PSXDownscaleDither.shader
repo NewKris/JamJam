@@ -11,23 +11,44 @@ Shader "Hidden/PSX/Downscale Dither"
 
         SubShader
         {
-            Tags { "RenderType" = "Opaque" "Queue" = "Overlay" }
+            Tags
+            {
+                "RenderPipeline" = "UniversalPipeline"
+                "RenderType" = "Opaque"
+                "Queue" = "Overlay"
+            }
 
             Pass
             {
-                ZTest Always Cull Off ZWrite Off
+                Name "PSXDownscaleDither"
+                ZTest Always
+                ZWrite Off
+                Cull Off
 
-                CGPROGRAM
+                HLSLPROGRAM
                 #pragma target 3.0
-                #pragma vertex vert_img
-                #pragma fragment frag
-                #include "UnityCG.cginc"
+                #pragma vertex Vert
+                #pragma fragment Frag
 
-                sampler2D _MainTex;
-                float4 _TargetResolution;
-                float _UseScreenResolution;
-                float _ColorBits;
-                float _DitherStrength;
+                #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+
+                TEXTURE2D(_MainTex);
+                float4 _MainTex_TexelSize;
+
+                SamplerState PSX_PointClampSampler
+                {
+                    Filter = MIN_MAG_MIP_POINT;
+                    AddressU = Clamp;
+                    AddressV = Clamp;
+                    AddressW = Clamp;
+                };
+
+                CBUFFER_START(UnityPerMaterial)
+                    float4 _TargetResolution;
+                    float _UseScreenResolution;
+                    float _ColorBits;
+                    float _DitherStrength;
+                CBUFFER_END
 
                 float Bayer4(float2 pixel)
                 {
@@ -55,28 +76,63 @@ Shader "Hidden/PSX/Downscale Dither"
                     return saturate(x / levels);
                 }
 
-                fixed4 frag(v2f_img i) : SV_Target
+                struct Attributes
                 {
+                    uint vertexID : SV_VertexID;
+                };
+
+                struct Varyings
+                {
+                    float4 positionCS : SV_POSITION;
+                    float2 uv : TEXCOORD0;
+                };
+
+                Varyings Vert(Attributes input)
+                {
+                    Varyings o;
+
+                    if (input.vertexID == 0u)
+                    {
+                        o.positionCS = float4(-1.0, -1.0, 0.0, 1.0);
+                        o.uv = float2(0.0, 0.0);
+                    }
+                    else if (input.vertexID == 1u)
+                    {
+                        o.positionCS = float4(-1.0, 3.0, 0.0, 1.0);
+                        o.uv = float2(0.0, 2.0);
+                    }
+                    else
+                    {
+                        o.positionCS = float4(3.0, -1.0, 0.0, 1.0);
+                        o.uv = float2(2.0, 0.0);
+                    }
+
+                    return o;
+                }
+
+                half4 Frag(Varyings i) : SV_Target
+                {
+                    float2 uv = saturate(i.uv);
+                    uv.y = 1.0 - uv.y;
+
                     float2 targetRes = max(_TargetResolution.xy, 1.0);
                     float2 screenRes = max(_ScreenParams.xy, 1.0);
                     float useScreen = saturate(_UseScreenResolution);
-
                     float2 res = lerp(targetRes, screenRes, useScreen);
 
-                    float2 uv = i.uv;
                     float2 pix = floor(uv * res) + 0.5;
                     float2 uvQ = pix / res;
 
-                    float3 col = tex2D(_MainTex, uvQ).rgb;
+                    float3 col = SAMPLE_TEXTURE2D(_MainTex, PSX_PointClampSampler, uvQ).rgb;
 
                     float2 pixelCoord = uv * _ScreenParams.xy;
                     float d = Bayer4(pixelCoord) * saturate(_DitherStrength);
 
                     col = QuantizeRgb(col, _ColorBits, d);
 
-                    return fixed4(col, 1.0);
+                    return half4(col, 1.0);
                 }
-                ENDCG
+                ENDHLSL
             }
         }
 }

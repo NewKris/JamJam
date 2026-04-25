@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Cola
   m_EditorClassIdentifier: 
   flavour:
-    sweet: 0
-    sour: 0
-    salt: 0
-    bitter: 0
-    alcohol: 0
+    sweet: 2
+    sour: 1
+    salt: 3
+    bitter: 2
+    alcohol: 2
     isPoison: 0
     isBeer: 0

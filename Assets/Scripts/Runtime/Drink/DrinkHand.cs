@@ -16,7 +16,7 @@ namespace JamJam.Runtime.Drink {
             if (!HoldingDrink) return;
             
             Destroy(_heldDrink.gameObject);
-            _heldDrink = null;
+            ReleaseDrink();
         }
         
         public void DropDrink() {
@@ -24,13 +24,13 @@ namespace JamJam.Runtime.Drink {
             
             _heldDrink.transform.SetParent(null);
             _heldDrink.GetComponent<Rigidbody>().isKinematic = false;
-            _heldDrink = null;
+            ReleaseDrink();
         }
         
         public void SpawnNewDrink() {
             if (HoldingDrink) return;
             
-            _heldDrink = Instantiate(drinkPrefab).GetComponent<DrinkObject>();
+            HoldDrink(Instantiate(drinkPrefab).GetComponent<DrinkObject>());
             _heldDrink.PinDrink(transform);
         }
 
@@ -39,13 +39,13 @@ namespace JamJam.Runtime.Drink {
 
             mixer.CurrentDrink = _heldDrink;
             _heldDrink.PinDrink(mixer.transform);
-            _heldDrink = null;
+            ReleaseDrink();
         }
 
         public void PickUpDrink(Mixer mixer) {
             if (HoldingDrink || mixer.CurrentDrink == null) return;
             
-            _heldDrink = mixer.CurrentDrink;
+            HoldDrink(mixer.CurrentDrink);
             mixer.CurrentDrink = null;
             _heldDrink.PinDrink(transform);
         }
@@ -53,7 +53,7 @@ namespace JamJam.Runtime.Drink {
         public void PickUpDrink(DrinkObject drink) {
             if (HoldingDrink) return;
             
-            _heldDrink = drink;
+            HoldDrink(drink);
             _heldDrink.PinDrink(transform);
         }
 
@@ -61,7 +61,7 @@ namespace JamJam.Runtime.Drink {
             if (!HoldingDrink) return;
 
             seat.ServeDrink(_heldDrink);
-            _heldDrink = null;
+            ReleaseDrink();
         }
 
         private void Awake() {
@@ -76,6 +76,16 @@ namespace JamJam.Runtime.Drink {
             if (!HoldingDrink) return;
             
             _heldDrink.AddIngredient(ingredients[ingredientIndex]);
+        }
+
+        private void HoldDrink(DrinkObject drink) {
+            _heldDrink = drink;
+            _heldDrink.SetInfoPanelActive(true);
+        }
+
+        private void ReleaseDrink() {
+            _heldDrink.SetInfoPanelActive(false);
+            _heldDrink = null;
         }
     }
 }

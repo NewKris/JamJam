@@ -10,13 +10,10 @@ EditorBuildSettings:
     guid: 1e5d6e2021dd68f40949600bc683b312
   - enabled: 1
     path: Assets/Scenes/Core Scenes/Gameplay.unity
-    guid: ace2c14de558bf94a8ce4ad074b0b6bd
+    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/Core Scenes/Game Over.unity
     guid: d204bd634263e764aba3c85aacd2732a
-  - enabled: 1
-    path: Assets/Scenes/Test Scenes/Playground.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

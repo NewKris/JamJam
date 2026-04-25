@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 namespace JamJam.Runtime.UI {
     public class MenuController : MonoBehaviour {
         public void PlayGame() {
-            SceneManager.LoadScene("Playground");
+            SceneManager.LoadScene("Gameplay");
         }
 
         public void ExitGame() {

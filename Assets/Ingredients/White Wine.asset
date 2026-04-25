@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: White Wine
   m_EditorClassIdentifier: 
   flavour:
-    sweet: 0
-    sour: 0
-    salt: 0
-    bitter: 0
-    alcohol: 0
+    sweet: -1
+    sour: -1
+    salt: -1
+    bitter: -1
+    alcohol: -1
     isPoison: 0
     isBeer: 0
+  displayName: 
+  description: 
+  icon: {fileID: 0}
+  keyBind: 

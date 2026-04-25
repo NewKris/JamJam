@@ -55,23 +55,23 @@ namespace JamJam.Runtime.Drink {
         }
 
         private int GetTotalSweetness() {
-            return ingredients.Select(x => x.flavour.sweet).Sum();
+            return Math.Clamp(ingredients.Select(x => x.flavour.sweet).Sum(), 0, Flavour.MaxFlavourLevel);
         }
         
         private int GetTotalSourness() {
-            return ingredients.Select(x => x.flavour.sour).Sum();
+            return Math.Clamp(ingredients.Select(x => x.flavour.sour).Sum(), 0, Flavour.MaxFlavourLevel);
         }
         
         private int GetTotalSaltiness() {
-            return ingredients.Select(x => x.flavour.salt).Sum();
+            return Math.Clamp(ingredients.Select(x => x.flavour.salt).Sum(), 0, Flavour.MaxFlavourLevel);
         }
         
         private int GetTotalBitterness() {
-            return ingredients.Select(x => x.flavour.bitter).Sum();
+            return Math.Clamp(ingredients.Select(x => x.flavour.bitter).Sum(), 0, Flavour.MaxFlavourLevel);
         }
         
         private int GetTotalAlcohol() {
-            return ingredients.Select(x => x.flavour.alcohol).Sum();
+            return Math.Clamp(ingredients.Select(x => x.flavour.alcohol).Sum(), 0, Flavour.MaxFlavourLevel);
         }
 
         private void Start() {

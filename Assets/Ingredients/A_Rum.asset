@@ -12,15 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbfdf3a84f342fd938922d93adf29a0, type: 3}
   m_Name: A_Rum
   m_EditorClassIdentifier: 
+  ingredientVolume: 1
   flavour:
-    sweet: 1
+    sweet: 2
     sour: 0
     salt: 0
     bitter: 0
-    alcohol: 0
+    alcohol: 2
     isPoison: 0
     isBeer: 0
-  displayName: 
-  description: 
+  displayName: Rum
+  description: 'Dark, sweet and strong.
+
+
+    Did you know that sailors used to measure
+    the proof of their rum by mixing it with gunpowder and igniting it? Only the
+    rum that exploded had a good alcohol concentration.'
   icon: {fileID: 0}
   keyBind: 

@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbfdf3a84f342fd938922d93adf29a0, type: 3}
   m_Name: NA_Mint
   m_EditorClassIdentifier: 
+  ingredientVolume: 1
   flavour:
     sweet: 0
     sour: 0
     salt: 0
-    bitter: 1
+    bitter: 2
     alcohol: 0
     isPoison: 0
     isBeer: 0
-  displayName: 
-  description: 
+  displayName: Mint
+  description: 'Bitter and refreshing.
+
+
+    Did you know that mint activates the
+    cold receptors on the tongue, making it feel cool?'
   icon: {fileID: 0}
   keyBind: 

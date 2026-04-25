@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbfdf3a84f342fd938922d93adf29a0, type: 3}
   m_Name: NA_Lime
   m_EditorClassIdentifier: 
+  ingredientVolume: 1
   flavour:
     sweet: 0
-    sour: 1
+    sour: 2
     salt: 0
     bitter: 0
     alcohol: 0
     isPoison: 0
     isBeer: 0
   displayName: Lime
-  description: stuff
+  description: 'Soour and refreshing.
+
+
+    Did you know that not all lime are citruses?
+    The Wild Lime is actually more closely related to Sichuan Pepper.'
   icon: {fileID: 0}
   keyBind: 

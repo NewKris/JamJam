@@ -12,6 +12,8 @@ namespace JamJam.Runtime.Drink {
         public int maxIngredients = 5;
         public FlavourInfoDisplay drinkInfo;
         public int satisfactionLoss = 25;
+
+        private int _capacity = 0;
         
         public bool HasIngredients => ingredients.Count > 0;
 
@@ -27,9 +29,10 @@ namespace JamJam.Runtime.Drink {
         }
         
         public void AddIngredient(Ingredient ingredient) {
-            if (ingredients.Count >= maxIngredients) return;
-            
+            if (_capacity >= maxIngredients) return;
+
             Debug.Log($"Added ingredient: {ingredient.name}");
+            _capacity += ingredient.ingredientVolume;
             ingredients.Add(ingredient);
             drinkInfo.UpdateDisplay(SumFlavours());
         }

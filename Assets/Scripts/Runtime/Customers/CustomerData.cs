@@ -8,5 +8,6 @@ namespace JamJam.Runtime.Customers {
         public CustomerRequest desiredFlavour;
         public int satisfactionLoss;
         public int satisfactionGain;
+        public bool isTarget;
     }
 }

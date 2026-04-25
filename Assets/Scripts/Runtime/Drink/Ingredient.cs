@@ -3,6 +3,8 @@
 namespace JamJam.Runtime.Drink {
     [CreateAssetMenu(menuName = "Ingredient")]
     public class Ingredient : ScriptableObject {
+        public bool isPoisonous;
+        public int ingredientVolume = 1;
         public Flavour flavour;
 
         [Header("Info")] 

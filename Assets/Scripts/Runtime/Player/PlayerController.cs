@@ -35,6 +35,9 @@ namespace JamJam.Runtime.Player {
             ActionMap["Ingredient 10"].performed += _ =>  OnAddIngredient?.Invoke(9);
             ActionMap["Ingredient 11"].performed += _ =>  OnAddIngredient?.Invoke(10);
             ActionMap["Ingredient 12"].performed += _ =>  OnAddIngredient?.Invoke(11);
+            ActionMap["Ingredient 13"].performed += _ =>  OnAddIngredient?.Invoke(12);
+            ActionMap["Ingredient 14"].performed += _ =>  OnAddIngredient?.Invoke(13);
+            ActionMap["Ingredient 15"].performed += _ =>  OnAddIngredient?.Invoke(14);
             
             ActionMap.Enable();
         }

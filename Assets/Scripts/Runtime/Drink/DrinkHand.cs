@@ -6,7 +6,7 @@ using UnityEngine;
 namespace JamJam.Runtime.Drink {
     public class DrinkHand : MonoBehaviour {
         public GameObject drinkPrefab;
-        public Ingredient[] ingredients;
+        public IngredientDatabase ingredients;
         
         private DrinkObject _heldDrink;
 

@@ -1,12 +1,13 @@
 ﻿using System;
-using JamJam.Runtime.Bar;
+using JamJam.Runtime.Drink;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace JamJam.Runtime.Player {
     public class InteractController : MonoBehaviour {
         public float maxInteractDistance;
         public LayerMask interactMask;
-        public Drink drink;
+        public DrinkHand drinkHand;
 
         private void Awake() {
             PlayerController.OnGrab += TryGrab;
@@ -19,35 +20,32 @@ namespace JamJam.Runtime.Player {
         }
 
         private void TryGrab() {
-            if (drink.HoldingDrink) return;
-            
-            if (Physics.Raycast(GetRay(), out RaycastHit hit, maxInteractDistance, interactMask)) {
-                if (hit.collider.TryGetComponent(out DrinkSource _)) {
-                    drink.GrabDrink(new DrinkData());
-                } else if (hit.collider.TryGetComponent(out DrinkHolder holder) 
-                           && holder.HasDrink
-                ) {
-                    drink.GrabDrink(holder.HeldDrink);
-                    holder.RemoveDrink();
-                }
+            if (TryInteract(out GrabInteractable grabInteractable)) {
+                grabInteractable.Grab();
             }
         }
 
         private void TryRelease() {
-            if (!drink.HoldingDrink) return;
-            
-            if (Physics.Raycast(GetRay(), out RaycastHit hit, maxInteractDistance, interactMask)
-                && hit.collider.TryGetComponent(out DrinkHolder receiver)
-                && !receiver.HasDrink
-            ) {
-                drink.PlaceGlass(receiver);
+            if (TryInteract(out ReleaseInteractable releaseInteractable)) {
+                releaseInteractable.Release();
             }
             else {
-                drink.ThrowGlass();
+                drinkHand.DropDrink();
             }
         }
 
-        private Ray GetRay() {
+        private bool TryInteract<T>(out T interactable) where T : Object {
+            bool hitInteraction = Physics.Raycast(GetCameraRay(), out RaycastHit hit, maxInteractDistance, interactMask);
+
+            if (!hitInteraction) {
+                interactable = null;
+                return false;
+            }
+            
+            return hit.collider.TryGetComponent(out interactable);
+        }
+
+        private Ray GetCameraRay() {
             return Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         }
     }

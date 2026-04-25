@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace JamJam.Runtime.Bar {
+namespace JamJam.Runtime.Drink {
     [Serializable]
     public struct Flavour {
         public float sweet;

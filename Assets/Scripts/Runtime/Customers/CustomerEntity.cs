@@ -10,8 +10,7 @@ namespace JamJam.Runtime.Customers {
         
         public void EnterBar(CustomerSeat assignedSeat, CustomerData assignedData) {
             _assignedSeat =  assignedSeat;
-            _assignedSeat.Available = false;
-            _assignedSeat.CurrentCustomer = this;
+            _assignedSeat.SeatCustomer(this);
             data = assignedData;
             
             StartCoroutine(WalkToSeat());

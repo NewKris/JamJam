@@ -25,6 +25,7 @@ namespace JamJam.Runtime.Drink {
             _heldDrink.transform.SetParent(null);
             _heldDrink.GetComponent<Rigidbody>().isKinematic = false;
             ReleaseDrink();
+            SatisfactionManager.DecreaseSatisfaction(25);
         }
         
         public void SpawnNewDrink() {

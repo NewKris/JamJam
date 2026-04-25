@@ -17,9 +17,16 @@ namespace JamJam.Runtime.Customers {
         public void ServeDrink(DrinkObject drinkObject) {
             StartCoroutine(PlayServeSequence(drinkObject));
         }
+
+        public void SeatCustomer(CustomerEntity customer) {
+            Available = false;
+            CurrentCustomer = customer;
+            SetCollidersActive(true);
+        }
         
         private void Start() {
             Available = true;
+            SetCollidersActive(false);
         }
 
         private void OnDrawGizmos() {
@@ -29,11 +36,18 @@ namespace JamJam.Runtime.Customers {
         }
 
         private IEnumerator PlayServeSequence(DrinkObject drinkObject) {
+            SetCollidersActive(false);
             drinkObject.PinDrink(coaster);
             yield return new WaitForSeconds(1f);
             yield return CurrentCustomer.WalkOut();
             Destroy(drinkObject.gameObject);
             Available = true;
+        }
+
+        private void SetCollidersActive(bool active) {
+            foreach (Collider col in GetComponentsInChildren<Collider>()) {
+                col.enabled = active;
+            }
         }
     }
 }

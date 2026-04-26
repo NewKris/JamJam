@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Frogter Whiter
   firstBark: Challenge me, kid! The worse the better! But it's gotta be hard!
-  repeatingBark: Gimme a real witches brew, kid. Somthin' truly awful.
+  repeatingBark: Gimme a real hard witches brew, kid. Somthin' truly awful.
   desiredFlavour:
     desiredSweetness:
       level: 0

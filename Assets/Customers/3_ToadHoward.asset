@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: 3_ToadHoward
   m_EditorClassIdentifier: 
   displayName: Toad Howard
-  firstBark: Ya see me with an empty cup, fill it up. Anythin' goes, honey.
-  repeatingBark: Ah, it's you again! My glass is empty, ya know the drill, hun.
+  firstBark: Ya see me with an empty cup, fill it up. Anythin' goes, honey. As long
+    as it has a LOT of Alcohol.
+  repeatingBark: Ah, it's you again! My glass is empty, ya know the drill, hun. Alcohol!
   desiredFlavour:
     desiredSweetness:
       level: 0

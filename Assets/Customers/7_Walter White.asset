@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: 7_Walter White
   m_EditorClassIdentifier: 
   displayName: Frogter White
-  firstBark: I need me somethi' sour and sweet. And in pretty red, if you can.
+  firstBark: I need me somethi' sour and sweet. And in pretty red, if you can. A
+    Negroni!
   repeatingBark: One negroni, please.
   desiredFlavour:
     desiredSweetness:
       level: 4
       evaluator: 2
     desiredSourness:
-      level: 2
-      evaluator: 2
+      level: 1
+      evaluator: 0
     desiredSaltness:
       level: 1
       evaluator: 0

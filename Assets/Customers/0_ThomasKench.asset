@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 0_ThomasKench
   m_EditorClassIdentifier: 
   displayName: Thomas Kench
-  firstBark: 'Howdy! Could you give me a nice drink with something sweet? <br><br>[Take
-    a glass and add matching ingredients] '
+  firstBark: Howdy! Could you give me a nice drink with something sweet? A cola,
+    maybe?
   repeatingBark: '-'
   desiredFlavour:
     desiredSweetness:

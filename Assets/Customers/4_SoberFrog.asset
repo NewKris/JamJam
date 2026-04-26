@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 4_SoberFrog
   m_EditorClassIdentifier: 
   displayName: Frogie Green
-  firstBark: 'Hello there. You happen to have anythin'' non-alcoholic? A little bit
-    of everything, but not so sour. '
+  firstBark: Hello there. You happen to have anythin' non-alcoholic? A little bit
+    of everything, but not so sour. Maybe some Cola with Lime?
   repeatingBark: Hi again, dear. Something fizzy, or a mocktail, if you please. I
-    can't stand no orange though.
+    can't stand no orange though. Cola and Lime, will do.
   desiredFlavour:
     desiredSweetness:
-      level: 1
+      level: 0
       evaluator: 2
     desiredSourness:
       level: 1
@@ -28,7 +28,7 @@ MonoBehaviour:
       level: 1
       evaluator: 0
     desiredBitterness:
-      level: 1
+      level: 0
       evaluator: 2
     desiredAlcohol:
       level: 0

@@ -4189,7 +4189,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f8394cea4581f40f2a09fe57adf91792, type: 2}
   - {fileID: 11400000, guid: 110614aac31dc436db68f502aa94d4ab, type: 2}
   tutorialCustomers:
-  - {fileID: 11400000, guid: 3fd4c48033b42c74f9dabf889d289380, type: 2}
+  - {fileID: 11400000, guid: 2a3d3047e8661b441a72c303f53fb917, type: 2}
   finalBoss: {fileID: 11400000, guid: 41fde191563c1ae488bdfb589e27d8fe, type: 2}
   tutorialParent: {fileID: 153194060}
 --- !u!1 &770108783

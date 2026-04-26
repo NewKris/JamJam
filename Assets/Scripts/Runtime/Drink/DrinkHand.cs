@@ -1,4 +1,5 @@
 ﻿using System;
+using JamJam.Runtime.Audio;
 using JamJam.Runtime.Customers;
 using JamJam.Runtime.Player;
 using UnityEngine;
@@ -32,6 +33,7 @@ namespace JamJam.Runtime.Drink {
             
             HoldDrink(Instantiate(drinkPrefab, transform.position, transform.rotation).GetComponent<DrinkObject>());
             _heldDrink.PinDrink(transform);
+            SfxSystem.PlayPickUp();
         }
 
         public void PlaceDrink(Mixer mixer) {
@@ -48,6 +50,7 @@ namespace JamJam.Runtime.Drink {
             HoldDrink(mixer.CurrentDrink);
             mixer.CurrentDrink = null;
             _heldDrink.PinDrink(transform);
+            SfxSystem.PlayPickUp();
         }
         
         public void PickUpDrink(DrinkObject drink) {

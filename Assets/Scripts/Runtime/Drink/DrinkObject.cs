@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using JamJam.Runtime.Audio;
 using JamJam.Runtime.Player;
 using JamJam.Runtime.Utility.Attributes;
 using UnityEngine;
@@ -26,6 +27,7 @@ namespace JamJam.Runtime.Drink {
             SatisfactionManager.DecreaseSatisfaction(satisfactionLoss);
             Destroy(gameObject);
             VfxPlayer.TriggerCrash();
+            SfxSystem.PlayCrash(transform.position);
         }
         
         public void SetInfoPanelActive(bool isActive) {

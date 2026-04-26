@@ -4,18 +4,12 @@ using UnityEngine;
 
 namespace JamJam.Runtime.UI {
     public class TutorialPanel : MonoBehaviour {
-        public GameObject tutorialParent;
+        public GameObject tutorial1;
+        public GameObject tutorial2;
 
-        private void Awake() {
-            PlayerController.OnToggleTutorial += ToggleTutorial;
-        }
-
-        private void OnDestroy() {
-            PlayerController.OnToggleTutorial -= ToggleTutorial;
-        }
-
-        private void ToggleTutorial() {
-            tutorialParent.SetActive(!tutorialParent.activeSelf);
+        private void Update() {
+            tutorial1.SetActive(PlayerController.HoldingTutorial1);
+            tutorial2.SetActive(PlayerController.HoldingTutorial2);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
+using JamJam.Runtime.Audio;
 using JamJam.Runtime.Drink;
 using JamJam.Runtime.Player;
 using TMPro;
@@ -14,6 +15,7 @@ namespace JamJam.Runtime.Customers {
         public TextMeshProUGUI speechText;
         public SpriteRenderer spriteRenderer;
         public Image timerSprite;
+        public FootStepPlayer footSteps;
 
         private CustomerSeat _assignedSeat;
         private float _patience;
@@ -66,6 +68,7 @@ namespace JamJam.Runtime.Customers {
             SpriteRenderer reactionSprite = reactionBubble.GetComponent<SpriteRenderer>();
             
             transform.position = start;
+            footSteps.IsWalking = true;
             
             for (float t = 0; t < 2; t += Time.deltaTime) {
                 transform.position = Vector3.Lerp(start, end, t / 2);
@@ -77,6 +80,7 @@ namespace JamJam.Runtime.Customers {
             transform.position = end;
             spriteRenderer.color = Color.clear;
             reactionSprite.color = Color.clear;
+            footSteps.IsWalking = false;
             
             Destroy(gameObject);
             CustomerSystem.DeSpawnCustomer(data);
@@ -87,6 +91,7 @@ namespace JamJam.Runtime.Customers {
             Vector3 end = _assignedSeat.SeatPos;
             
             transform.position = start;
+            footSteps.IsWalking = true;
             
             for (float t = 0; t < 2; t += Time.deltaTime) {
                 transform.position = Vector3.Lerp(start, end, t / 2);
@@ -96,6 +101,7 @@ namespace JamJam.Runtime.Customers {
             
             spriteRenderer.color = Color.white;
             transform.position = end;
+            footSteps.IsWalking = false;
         }
 
         private void Update() {

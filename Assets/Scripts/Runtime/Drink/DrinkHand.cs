@@ -42,6 +42,7 @@ namespace JamJam.Runtime.Drink {
             mixer.CurrentDrink = _heldDrink;
             _heldDrink.PinDrink(mixer.glassPivot);
             ReleaseDrink();
+            SfxSystem.PlayPlaceDown();
         }
 
         public void PickUpDrink(Mixer mixer) {
@@ -58,6 +59,7 @@ namespace JamJam.Runtime.Drink {
             
             HoldDrink(drink);
             _heldDrink.PinDrink(transform);
+            SfxSystem.PlayPickUp();
         }
 
         public void ServeDrink(CustomerSeat seat) {
@@ -65,6 +67,7 @@ namespace JamJam.Runtime.Drink {
 
             seat.ServeDrink(_heldDrink);
             ReleaseDrink();
+            SfxSystem.PlayPlaceDown();
         }
 
         private void Awake() {

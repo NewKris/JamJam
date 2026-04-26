@@ -7,6 +7,7 @@ namespace JamJam.Runtime.Audio {
 
         public GameObject oneShotPrefab;
         public AudioClip[] pickUpGlass;
+        public AudioClip[] placeDownGlass;
         public AudioClip[] glassCrash;
         
         private AudioSource _sfxSource;
@@ -17,6 +18,10 @@ namespace JamJam.Runtime.Audio {
 
         public static void PlayPickUp() {
             Instance.PlayOneShot(Instance.pickUpGlass.GetRandom());
+        }
+
+        public static void PlayPlaceDown() {
+            Instance.PlayOneShot(Instance.placeDownGlass.GetRandom());
         }
 
         public static void PlayCrash(Vector3 point) {

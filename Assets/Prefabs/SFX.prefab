@@ -51,6 +51,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1356557b80edda74cb3ec3c7c63350a9, type: 3}
   - {fileID: 8300000, guid: 0e702c1a3086d2e4c92c7832005f9802, type: 3}
   - {fileID: 8300000, guid: e8916990b3a07b548af094275a1764de, type: 3}
+  placeDownGlass:
+  - {fileID: 8300000, guid: d5b8b6c8d1e3a5f438049b8cba769f5b, type: 3}
+  - {fileID: 8300000, guid: 73f12e88a2b67dc4d90021901c577044, type: 3}
+  - {fileID: 8300000, guid: f575e117ce5b5ef4791983359de1ccba, type: 3}
   glassCrash:
   - {fileID: 8300000, guid: 0587edde3cd891643a8ffe13f9f20b43, type: 3}
 --- !u!82 &2650412128812900756

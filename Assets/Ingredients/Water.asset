@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   ingredientVolume: 1
-  ingredientColor: {r: 1, g: 1, b: 1, a: 1}
+  ingredientColor: {r: 0.3443396, g: 0.9055256, b: 1, a: 1}
   flavour:
     sweet: -1
     sour: -1

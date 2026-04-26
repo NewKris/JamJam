@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NA_Cola
   m_EditorClassIdentifier: 
   ingredientVolume: 1
-  ingredientColor: {r: 1, g: 1, b: 1, a: 1}
+  ingredientColor: {r: 0.6132076, g: 0.2716556, b: 0.020247431, a: 1}
   flavour:
     sweet: 2
     sour: 0

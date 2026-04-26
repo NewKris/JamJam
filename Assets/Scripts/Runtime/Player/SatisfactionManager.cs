@@ -17,7 +17,7 @@ namespace JamJam.Runtime.Player {
             Instance.satisfactionSlider.value = SatisfactionLevel;
 
             if (SatisfactionLevel <= 0) {
-                GameManager.Lose("“You suck! You ruined my wedding! I hate you!”");
+                GameManager.Lose("“Get out, now! You ruined my wedding day. I hate you so much!”");
             }
         }
 

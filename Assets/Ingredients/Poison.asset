@@ -23,7 +23,7 @@ MonoBehaviour:
     isPoison: 1
     isBeer: 0
   sfx: {fileID: 8300000, guid: 3b8342dd17f744474891b777abfe4bf7, type: 3}
-  displayName: 
+  displayName: Poison
   description: 'The Silent Killer. Supersalty though.
 
 

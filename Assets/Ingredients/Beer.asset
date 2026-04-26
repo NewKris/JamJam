@@ -23,7 +23,7 @@ MonoBehaviour:
     isPoison: 0
     isBeer: 1
   sfx: {fileID: 8300000, guid: ac3da72a7dff04d48b430859217a0407, type: 3}
-  displayName: 
+  displayName: Beer
   description: 'Just beer.
 
 

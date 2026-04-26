@@ -27,7 +27,7 @@ namespace JamJam.Runtime.Customers {
             _assignedSeat.SeatCustomer(this);
             data = assignedData;
             speechText.text = CustomerSystem.HasSpawnedCustomerBefore(data) ? data.repeatingBark : data.firstBark;
-            
+
             StartCoroutine(WalkToSeat());
         }
 
@@ -63,15 +63,21 @@ namespace JamJam.Runtime.Customers {
         public IEnumerator WalkOut() {
             Vector3 start = _assignedSeat.SeatPos;
             Vector3 end = _assignedSeat.SpawnStart;
+            SpriteRenderer reactionSprite = reactionBubble.GetComponent<SpriteRenderer>();
             
             transform.position = start;
             
             for (float t = 0; t < 2; t += Time.deltaTime) {
                 transform.position = Vector3.Lerp(start, end, t / 2);
+                spriteRenderer.color = Color.Lerp(Color.white, Color.clear, t);
+                reactionSprite.color = Color.Lerp(Color.white, Color.clear, t);
                 yield return null;
             }
             
             transform.position = end;
+            spriteRenderer.color = Color.clear;
+            reactionSprite.color = Color.clear;
+            
             Destroy(gameObject);
             CustomerSystem.DeSpawnCustomer(data);
         }
@@ -84,9 +90,11 @@ namespace JamJam.Runtime.Customers {
             
             for (float t = 0; t < 2; t += Time.deltaTime) {
                 transform.position = Vector3.Lerp(start, end, t / 2);
+                spriteRenderer.color = Color.Lerp(Color.clear, Color.white, t);
                 yield return null;
             }
             
+            spriteRenderer.color = Color.white;
             transform.position = end;
         }
 

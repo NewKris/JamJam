@@ -2472,9 +2472,19 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3953674947716635372, guid: 6e84bbf96afc0824fbb894a822ec7c62, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4480342000100985097, guid: 6e84bbf96afc0824fbb894a822ec7c62, type: 3}
       propertyPath: m_Name
       value: Main Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520387658231045564, guid: 6e84bbf96afc0824fbb894a822ec7c62, type: 3}
+      propertyPath: m_text
+      value: '<size=70>The Wedding Gift</size>
+
+        Lady Froggington Must Croak'
       objectReference: {fileID: 0}
     - target: {fileID: 8442376129599932410, guid: 6e84bbf96afc0824fbb894a822ec7c62, type: 3}
       propertyPath: m_Pivot.x

@@ -101,7 +101,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 2.26
     - _GlossyReflections: 0
-    - _Metallic: 0.7
+    - _Metallic: 3.24
     - _OcclusionStrength: 1
     - _OpacityThreshold: 0.28
     - _Parallax: 0.005

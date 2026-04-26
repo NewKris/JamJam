@@ -56,7 +56,7 @@ namespace JamJam.Runtime.Customers {
                     yield break;
                 }
                 else {
-                    GameManager.Lose("You poisoned the wrong target!");
+                    GameManager.Lose("“Hey, what’s wrong? Hey… Oh my god, they’re dead. Call the police!”");
                     yield break;
                 }
             }

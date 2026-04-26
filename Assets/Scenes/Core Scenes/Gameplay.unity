@@ -4944,6 +4944,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3497381967849714999, guid: 13548a89ab6f9714db613a22d087d65b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4306253723656105869, guid: 13548a89ab6f9714db613a22d087d65b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9678,7 +9682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2f03c138f34d85966079a26f10a1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 60
+  sensitivity: 0.1
   axisScaling: {x: 1, y: 1}
   mouseSmoothing: 0.01
   minPitchAngle: -70
@@ -10841,8 +10845,8 @@ SceneRoots:
   - {fileID: 879435984}
   - {fileID: 168618897}
   - {fileID: 703304380}
-  - {fileID: 85138835}
   - {fileID: 1702698112}
+  - {fileID: 85138835}
   - {fileID: 4107643938340040000}
   - {fileID: 695874117341923338}
   - {fileID: 725735779}

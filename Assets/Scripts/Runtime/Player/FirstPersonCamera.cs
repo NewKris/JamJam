@@ -28,7 +28,7 @@ namespace JamJam.Runtime.Player {
         }
 
         private void Look(Vector2 deltaMouse, float dt) {
-            Vector2 lookVel = Vector2.Scale(deltaMouse, axisScaling) * (dt * sensitivity);
+            Vector2 lookVel = Vector2.Scale(deltaMouse, axisScaling) * sensitivity;
             
             _yaw.Target += lookVel.x;
             _yaw.Target %= 360f;

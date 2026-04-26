@@ -117,7 +117,7 @@ Material:
     - _LocalSnapStrength: 1
     - _LocalUvSnapStrength: 1
     - _Metallic: 0
-    - _NormalScale: 1
+    - _NormalScale: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _PsxSpecPower: 44.6

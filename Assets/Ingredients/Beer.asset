@@ -30,4 +30,4 @@ MonoBehaviour:
     Did you know that a frog will drink anything with
     beer in it when drunk enough?'
   icon: {fileID: 0}
-  keyBind: S
+  keyBind: D

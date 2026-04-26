@@ -37,4 +37,4 @@ MonoBehaviour:
   satisfactionGain: 20
   isTarget: 1
   sprite: {fileID: 21300000, guid: b65d50f30b3f91c4090f8233fd204437, type: 3}
-  patienceTime: 100
+  patienceTime: 120

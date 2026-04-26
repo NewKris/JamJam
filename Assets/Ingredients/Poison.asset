@@ -30,4 +30,4 @@ MonoBehaviour:
     Did you know that this
     is poison? Remember to hide the saltyness.'
   icon: {fileID: 0}
-  keyBind: D
+  keyBind: S

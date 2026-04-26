@@ -14,10 +14,14 @@ namespace JamJam.Runtime.Customers {
         public float spawnRate;
         public CustomerSeat[] seats;
         public List<CustomerData> customerPool;
+        public CustomerData[] tutorialCustomers;
         public CustomerData finalBoss;
 
         private int _satisfaction;
         private float _lastSpawnTime;
+        private int _nextTutorialCustomer;
+        
+        private bool IsInTutorial => _nextTutorialCustomer < tutorialCustomers.Length;
 
         public static void DeSpawnCustomer(CustomerData data) {
             ActiveCustomers.Remove(data);
@@ -51,12 +55,24 @@ namespace JamJam.Runtime.Customers {
             
             if (seat == null) return;
 
+            CustomerData data = IsInTutorial ? GetTutorialCustomer() : GetRandomCustomer();
+            
+            SpawnCustomer(data, seat);
+        }
+
+        private CustomerData GetTutorialCustomer() {
+            CustomerData data = tutorialCustomers[_nextTutorialCustomer];
+            _nextTutorialCustomer++;
+            return data;
+        }
+
+        private CustomerData GetRandomCustomer() {
             int randomIndex;
             do {
                 randomIndex = Random.Range(0, customerPool.Count);
             } while (ActiveCustomers.Contains(customerPool[randomIndex]));
             
-            SpawnCustomer(customerPool[randomIndex], seat);
+            return customerPool[randomIndex];
         }
 
         private void SpawnCustomer(CustomerData customer, CustomerSeat seat) {

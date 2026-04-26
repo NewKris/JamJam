@@ -15,6 +15,7 @@ namespace JamJam.Runtime.Customers {
         public List<CustomerData> customerPool;
         public CustomerData[] tutorialCustomers;
         public CustomerData finalBoss;
+        public GameObject tutorialParent;
 
         private bool _isInTutorial;
         private int _satisfaction;
@@ -23,8 +24,8 @@ namespace JamJam.Runtime.Customers {
         private CustomerSeat[] _seats;
 
         public static void DeSpawnCustomer(CustomerData data) {
-            Instance._isInTutorial = Instance._nextTutorialCustomer < Instance.tutorialCustomers.Length;
             ActiveCustomers.Remove(data);
+            Instance.EvaluateTutorial();
         }
         
         public static bool HasSpawnedCustomerBefore(CustomerData data) {
@@ -42,7 +43,12 @@ namespace JamJam.Runtime.Customers {
             Instance = this;
             SpawnedCustomers = new HashSet<CustomerData>(customerPool.Count);
             ActiveCustomers = new HashSet<CustomerData>(customerPool.Count);
+            EvaluateTutorial();
+        }
+
+        private void EvaluateTutorial() {
             Instance._isInTutorial = Instance._nextTutorialCustomer < Instance.tutorialCustomers.Length;
+            tutorialParent.SetActive(_isInTutorial);
         }
 
         private void Update() {

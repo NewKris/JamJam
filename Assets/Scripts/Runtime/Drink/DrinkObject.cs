@@ -13,6 +13,7 @@ namespace JamJam.Runtime.Drink {
         public FlavourInfoDisplay drinkInfo;
         public int satisfactionLoss = 25;
         public Color emptyColor;
+        public MeshRenderer liquid;
         
         [Header("Read Only")]
         [ReadOnly] public float mixAmount;
@@ -75,6 +76,7 @@ namespace JamJam.Runtime.Drink {
         private void UpdateColor() {
             if (ingredients.Count == 0) {
                 _drinkColor = emptyColor;
+                liquid.gameObject.SetActive(false);
             }
             else {
                 var freq = ingredients.GroupBy(x => x)
@@ -83,9 +85,10 @@ namespace JamJam.Runtime.Drink {
                     .ToList();
 
                 _drinkColor = freq.First().ingredientColor;
+                liquid.gameObject.SetActive(true);
             }
             
-            GetComponentInChildren<MeshRenderer>().material.color = _drinkColor;
+            liquid.material.color = _drinkColor;
         }
         
         private bool IsBeer() {

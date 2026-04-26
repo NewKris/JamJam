@@ -9,6 +9,7 @@ namespace JamJam.Runtime.Drink {
         public Image indicator;
         public AudioSource source;
         public Transform glassPivot;
+        public ShakeAnimation shakeAnimation;
         
         public DrinkObject CurrentDrink { get; set; }
 
@@ -36,11 +37,13 @@ namespace JamJam.Runtime.Drink {
         private void BeginMix() {
             if (CurrentDrink && CurrentDrink.HasIngredients) {
                 source.Play();
+                shakeAnimation.Shaking = true;
             }
         }
 
         private void StopMix() {
             source.Stop();
+            shakeAnimation.Shaking = false;
         }
     }
 }

@@ -19,10 +19,10 @@ MonoBehaviour:
   desiredFlavour:
     desiredSweetness:
       level: 4
-      evaluator: 1
+      evaluator: 2
     desiredSourness:
       level: 4
-      evaluator: 0
+      evaluator: 2
     desiredSaltness:
       level: 1
       evaluator: 0

@@ -18,19 +18,19 @@ MonoBehaviour:
   repeatingBark: Another one! Marquisettes for everyone!
   desiredFlavour:
     desiredSweetness:
-      level: 6
+      level: 4
       evaluator: 2
     desiredSourness:
-      level: 6
+      level: 4
       evaluator: 2
     desiredSaltness:
       level: 4
-      evaluator: 0
+      evaluator: 2
     desiredBitterness:
-      level: 4
-      evaluator: 0
+      level: 0
+      evaluator: 2
     desiredAlcohol:
-      level: 6
+      level: 4
       evaluator: 2
     wantBeer: 0
   satisfactionLoss: 40

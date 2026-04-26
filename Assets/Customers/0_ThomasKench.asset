@@ -15,7 +15,7 @@ MonoBehaviour:
   displayName: Thomas Kench
   firstBark: 'Howdy! Could you give me a nice drink with something sweet? <br><br>[Take
     a glass and add matching ingredients] '
-  repeatingBark: Beer.
+  repeatingBark: '-'
   desiredFlavour:
     desiredSweetness:
       level: 2
@@ -32,7 +32,7 @@ MonoBehaviour:
     desiredAlcohol:
       level: 0
       evaluator: 2
-    wantBeer: 1
+    wantBeer: 0
   satisfactionLoss: 0
   satisfactionGain: 10
   isTarget: 0

@@ -18,16 +18,16 @@ MonoBehaviour:
   repeatingBark: Somethin' to quench my thirst. But no stinkin' alcohol, ya hear?
   desiredFlavour:
     desiredSweetness:
-      level: 1
+      level: 0
       evaluator: 2
     desiredSourness:
-      level: 1
-      evaluator: 0
+      level: 0
+      evaluator: 2
     desiredSaltness:
-      level: 1
+      level: 0
       evaluator: 0
     desiredBitterness:
-      level: 1
+      level: 0
       evaluator: 2
     desiredAlcohol:
       level: 0

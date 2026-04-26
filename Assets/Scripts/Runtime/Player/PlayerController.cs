@@ -7,6 +7,8 @@ namespace JamJam.Runtime.Player {
         public static event Action OnGrab;
         public static event Action OnRelease;
         public static event Action<int> OnAddIngredient;
+        public static event Action OnBeginMix;
+        public static event Action OnEndMix;
         
         public static bool HoldingMix { get; private set; }
         public static Vector2 DeltaMouse { get; private set; }
@@ -22,6 +24,9 @@ namespace JamJam.Runtime.Player {
             
             ActionMap["Interact"].performed += _ =>  OnGrab?.Invoke();
             ActionMap["Interact"].canceled += _ =>  OnRelease?.Invoke();
+            
+            ActionMap["Blend"].performed += _ =>  OnBeginMix?.Invoke();
+            ActionMap["Blend"].canceled += _ =>  OnEndMix?.Invoke();
             
             ActionMap["Ingredient 1"].performed += _ =>  OnAddIngredient?.Invoke(0);
             ActionMap["Ingredient 2"].performed += _ =>  OnAddIngredient?.Invoke(1);

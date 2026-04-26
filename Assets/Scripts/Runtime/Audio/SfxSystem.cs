@@ -11,6 +11,10 @@ namespace JamJam.Runtime.Audio {
         
         private AudioSource _sfxSource;
 
+        public static void PlayGeneric(AudioClip clip) {
+            Instance.PlayOneShot(clip);
+        }
+
         public static void PlayPickUp() {
             Instance.PlayOneShot(Instance.pickUpGlass.GetRandom());
         }

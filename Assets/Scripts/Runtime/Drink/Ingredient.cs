@@ -6,6 +6,7 @@ namespace JamJam.Runtime.Drink {
         public int ingredientVolume = 1;
         public Color ingredientColor = Color.white;
         public Flavour flavour;
+        public AudioClip sfx;
 
         [Header("Info")] 
         public string displayName;

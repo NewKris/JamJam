@@ -44,6 +44,7 @@ namespace JamJam.Runtime.Drink {
             ingredients.Add(ingredient);
             drinkInfo.UpdateDisplay(SumFlavours());
             UpdateColor();
+            SfxSystem.PlayGeneric(ingredient.sfx);
         }
         
         public void PinDrink(Transform target) {

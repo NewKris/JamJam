@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ca0af1e5814365a7e08c19d36a905a, type: 3}
   m_Name: 7_Walter White
   m_EditorClassIdentifier: 
-  displayName: Heisenberg
+  displayName: Frogter White
   firstBark: I need me somethi' sour and sweet. And in pretty red, if you can.
   repeatingBark: One negroni, please.
   desiredFlavour:

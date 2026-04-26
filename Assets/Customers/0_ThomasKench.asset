@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ca0af1e5814365a7e08c19d36a905a, type: 3}
   m_Name: 0_ThomasKench
   m_EditorClassIdentifier: 
+  displayName: Thomas Kench
   firstBark: 'Howdy! Could you give me a nice drink with something sweet? <br><br>[Take
     a glass and add matching ingredients] '
   repeatingBark: Beer.
@@ -35,5 +36,5 @@ MonoBehaviour:
   satisfactionLoss: 10
   satisfactionGain: 10
   isTarget: 0
-  sprite: {fileID: 21300000, guid: 10380c9b0adb318419c1424d2c9a4f0d, type: 3}
+  sprite: {fileID: 21300000, guid: c61f52b3ba36934489fd295a080c6f9e, type: 3}
   patienceTime: 500

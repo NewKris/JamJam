@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ca0af1e5814365a7e08c19d36a905a, type: 3}
   m_Name: 8_AlcoholicFrog
   m_EditorClassIdentifier: 
+  displayName: Alcoholic Frog
   firstBark: "I\u2019ve been sober comin' on 10 years, and the itch is really gettin'
     to me. Help a fella out?"
   repeatingBark: Somethin' to quench my thirst. But no stinkin' alcohol, ya hear?

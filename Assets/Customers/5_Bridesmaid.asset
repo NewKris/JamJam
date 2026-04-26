@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ca0af1e5814365a7e08c19d36a905a, type: 3}
   m_Name: 5_Bridesmaid
   m_EditorClassIdentifier: 
+  displayName: Bridesmaid
   firstBark: 'My bestie just got hitched! She looks like a real treat in that there
     dress. Well, gimme her favorite: a Marquisette!'
   repeatingBark: Wooooo! Mar-quiiiiii-sette!!!!! For! The! Bride!!

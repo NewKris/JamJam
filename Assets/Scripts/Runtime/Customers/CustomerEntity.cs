@@ -31,6 +31,7 @@ namespace JamJam.Runtime.Customers {
             data = assignedData;
             speechText.text = CustomerSystem.HasSpawnedCustomerBefore(data) ? data.repeatingBark : data.firstBark;
             nameText.text = assignedData.displayName;
+            nameText.transform.parent.gameObject.SetActive(!string.IsNullOrEmpty(assignedData.displayName));
 
             StartCoroutine(WalkToSeat());
         }

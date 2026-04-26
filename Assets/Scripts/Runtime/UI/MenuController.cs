@@ -7,6 +7,10 @@ namespace JamJam.Runtime.UI {
             SceneManager.LoadScene("Gameplay");
         }
 
+        public void StartNewGame() {
+            SceneManager.LoadScene("Intro Text");
+        }
+
         public void ExitGame() {
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;

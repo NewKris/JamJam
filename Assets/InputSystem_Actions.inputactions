@@ -196,10 +196,19 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Tutorial",
-                    "type": "Button",
+                    "name": "Tutorial 1",
+                    "type": "PassThrough",
                     "id": "d7cdc6f7-e0de-4333-a242-ffa6a1c781aa",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Tutorial 2",
+                    "type": "PassThrough",
+                    "id": "d3091229-3d5d-4874-b21c-925d9b6d5bbc",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -532,7 +541,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Tutorial",
+                    "action": "Tutorial 1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "23cc649c-a0aa-42ef-8b70-fdd9464d331e",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tutorial 2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

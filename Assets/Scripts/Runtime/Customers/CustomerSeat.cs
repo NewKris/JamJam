@@ -59,7 +59,7 @@ namespace JamJam.Runtime.Customers {
                     yield break;
                 }
                 else {
-                    GameManager.Lose("“Hey, what’s wrong? Hey… Oh my god, they’re dead. Call the police!”");
+                    GameManager.Lose("“Hey, what’s wrong, hun? What… Oh, my god, they’re dead! Someone, call the police!”");
                     yield break;
                 }
             }

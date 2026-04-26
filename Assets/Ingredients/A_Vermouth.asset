@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A_Vermouth
   m_EditorClassIdentifier: 
   ingredientVolume: 1
-  ingredientColor: {r: 1, g: 1, b: 1, a: 1}
+  ingredientColor: {r: 1, g: 0, b: 0, a: 1}
   flavour:
     sweet: 2
     sour: 0

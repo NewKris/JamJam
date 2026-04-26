@@ -9,27 +9,30 @@ namespace JamJam.Runtime.Player {
         public static event Action<int> OnAddIngredient;
         public static event Action OnBeginMix;
         public static event Action OnEndMix;
-        public static event Action OnToggleTutorial;
         
         public static bool HoldingMix { get; private set; }
+        public static bool HoldingTutorial1 { get; private set; }
+        public static bool HoldingTutorial2 { get; private set; }
         public static Vector2 DeltaMouse { get; private set; }
 
         private InputAction _mixAction;
         private InputAction _lookAction;
+        private InputAction _tutorial1Action;
+        private InputAction _tutorial2Action;
 
         private InputActionMap ActionMap => InputSystem.actions.actionMaps[0];
         
         private void Awake() {
             _lookAction = ActionMap["Look"];
             _mixAction = ActionMap["Mix"];
+            _tutorial1Action = ActionMap["Tutorial 1"];
+            _tutorial2Action = ActionMap["Tutorial 2"];
             
             ActionMap["Interact"].performed += _ =>  OnGrab?.Invoke();
             ActionMap["Interact"].canceled += _ =>  OnRelease?.Invoke();
             
             ActionMap["Blend"].performed += _ =>  OnBeginMix?.Invoke();
             ActionMap["Blend"].canceled += _ =>  OnEndMix?.Invoke();
-            
-            ActionMap["Tutorial"].performed += _ => OnToggleTutorial?.Invoke();
             
             ActionMap["Ingredient 1"].performed += _ =>  OnAddIngredient?.Invoke(0);
             ActionMap["Ingredient 2"].performed += _ =>  OnAddIngredient?.Invoke(1);
@@ -57,6 +60,8 @@ namespace JamJam.Runtime.Player {
         private void Update() {
             DeltaMouse = _lookAction.ReadValue<Vector2>();
             HoldingMix = _mixAction.ReadValue<float>() > 0f;
+            HoldingTutorial1 = _tutorial1Action.ReadValue<float>() > 0f;
+            HoldingTutorial2 = _tutorial2Action.ReadValue<float>() > 0f;
         }
     }
 }

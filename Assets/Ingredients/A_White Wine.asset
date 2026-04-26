@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A_White Wine
   m_EditorClassIdentifier: 
   ingredientVolume: 1
-  ingredientColor: {r: 1, g: 1, b: 1, a: 1}
+  ingredientColor: {r: 0.9622642, g: 0.9278295, b: 0.41304737, a: 1}
   flavour:
     sweet: 0
     sour: 2

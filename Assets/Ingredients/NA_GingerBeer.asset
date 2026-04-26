@@ -22,6 +22,7 @@ MonoBehaviour:
     alcohol: 0
     isPoison: 0
     isBeer: 0
+  sfx: {fileID: 8300000, guid: 87f787f6fa8584afaa1475e82d0f0733, type: 3}
   displayName: Ginger Beer
   description: 'Bitter and refreshing.
 

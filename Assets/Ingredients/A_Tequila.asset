@@ -22,11 +22,12 @@ MonoBehaviour:
     alcohol: 2
     isPoison: 0
     isBeer: 0
+  sfx: {fileID: 8300000, guid: 0558d3e5a7b6242ad869354d2ffaf3a9, type: 3}
   displayName: Tequila
   description: 'Sweet and strong.
 
 
     Did you know that if you drink tequila, everyone
-    goes from a five to an eight?'
+    becomes at least an eight?'
   icon: {fileID: 0}
   keyBind: 4

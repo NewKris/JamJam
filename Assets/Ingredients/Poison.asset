@@ -22,11 +22,12 @@ MonoBehaviour:
     alcohol: 0
     isPoison: 1
     isBeer: 0
+  sfx: {fileID: 8300000, guid: 3b8342dd17f744474891b777abfe4bf7, type: 3}
   displayName: 
   description: 'The Silent Killer. Supersalty though.
 
 
     Did you know that this
-    is poison? Remember to compensate for the saltyness.'
+    is poison? Remember to hide the saltyness.'
   icon: {fileID: 0}
   keyBind: D

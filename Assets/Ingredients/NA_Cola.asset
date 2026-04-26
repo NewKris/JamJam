@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: NA_Cola
   m_EditorClassIdentifier: 
   ingredientVolume: 1
+  ingredientColor: {r: 1, g: 1, b: 1, a: 1}
   flavour:
     sweet: 2
     sour: 0
@@ -21,6 +22,7 @@ MonoBehaviour:
     alcohol: 0
     isPoison: 0
     isBeer: 0
+  sfx: {fileID: 8300000, guid: 87f787f6fa8584afaa1475e82d0f0733, type: 3}
   displayName: Cola
   description: 'Sweet and refreshing.
 

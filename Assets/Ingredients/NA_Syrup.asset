@@ -22,6 +22,7 @@ MonoBehaviour:
     alcohol: 0
     isPoison: 0
     isBeer: 0
+  sfx: {fileID: 8300000, guid: 626abfd88984947518e1eb6dff65fa4b, type: 3}
   displayName: Syrup
   description: 'Sweet and refreshing.
 

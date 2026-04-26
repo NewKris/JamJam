@@ -22,6 +22,7 @@ MonoBehaviour:
     alcohol: 0
     isPoison: 0
     isBeer: 0
+  sfx: {fileID: 8300000, guid: 69cd556b415d34872b6adc547a2ec95b, type: 3}
   displayName: Lime
   description: 'Soour and refreshing.
 

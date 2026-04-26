@@ -22,6 +22,7 @@ MonoBehaviour:
     alcohol: 2
     isPoison: 0
     isBeer: 0
+  sfx: {fileID: 8300000, guid: 0558d3e5a7b6242ad869354d2ffaf3a9, type: 3}
   displayName: Gin
   description: "Clear, bitter and strong. \n\nDid you know that Gin originated as
     a medicinal liquor made by monks and alchemists?"

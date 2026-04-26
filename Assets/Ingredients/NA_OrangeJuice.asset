@@ -22,11 +22,12 @@ MonoBehaviour:
     alcohol: 0
     isPoison: 0
     isBeer: 0
+  sfx: {fileID: 8300000, guid: ac3da72a7dff04d48b430859217a0407, type: 3}
   displayName: Orange Juice
   description: 'Sweet and refreshing.
 
 
-    Did you know that you can make use orange
-    peel to start fires? Napalm won''t work though.'
+    Did you know that you can make use of
+    orange peel to start fires? Napalm won''t work though.'
   icon: {fileID: 0}
   keyBind: Q

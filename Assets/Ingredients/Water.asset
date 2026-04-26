@@ -22,11 +22,12 @@ MonoBehaviour:
     alcohol: -1
     isPoison: 0
     isBeer: 0
+  sfx: {fileID: 8300000, guid: ac3da72a7dff04d48b430859217a0407, type: 3}
   displayName: 
-  description: 'Dillutes the cocktail.
+  description: 'Makes a cocktail less intense.
 
 
-    Did you know that frogs are composed
-    of 80% water? '
+    Did you know that frogs are
+    composed of 80% water? '
   icon: {fileID: 0}
   keyBind: A

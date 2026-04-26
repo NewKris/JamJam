@@ -13,6 +13,7 @@ namespace JamJam.Runtime.Customers {
         public CustomerData data;
         public ReactionBubble reactionBubble;
         public TextMeshProUGUI speechText;
+        public TextMeshProUGUI nameText;
         public SpriteRenderer spriteRenderer;
         public Image timerSprite;
         public FootStepPlayer footSteps;
@@ -29,6 +30,7 @@ namespace JamJam.Runtime.Customers {
             _assignedSeat.SeatCustomer(this);
             data = assignedData;
             speechText.text = CustomerSystem.HasSpawnedCustomerBefore(data) ? data.repeatingBark : data.firstBark;
+            nameText.text = assignedData.displayName;
 
             StartCoroutine(WalkToSeat());
         }

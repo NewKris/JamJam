@@ -44,7 +44,7 @@ namespace JamJam.Runtime.Customers {
             reactionBubble.Display(false);
         }
 
-        public void EvaluateDrink(DrinkObject drink) {
+        public bool EvaluateDrink(DrinkObject drink) {
             _waiting = false;
             bool mixed = drink.mixAmount >= 1 || drink.ingredients.Distinct().Count() == 1;
             bool likesFlavour = mixed && data.desiredFlavour.EvaluateFlavour(drink.SumFlavours());
@@ -60,6 +60,7 @@ namespace JamJam.Runtime.Customers {
             
             speechText.transform.parent.gameObject.SetActive(false);
             reactionBubble.Display(likesFlavour);
+            return likesFlavour;
         }
         
         public IEnumerator WalkOut() {

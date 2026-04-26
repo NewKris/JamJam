@@ -46,13 +46,16 @@ namespace JamJam.Runtime.Customers {
             
             yield return new WaitForSeconds(1f);
             
-            CurrentCustomer.EvaluateDrink(drinkObject);
+            bool likesDrink = CurrentCustomer.EvaluateDrink(drinkObject);
             
             yield return CurrentCustomer.WalkOut();
 
             if (drinkObject.isPoisonous) {
                 if (CurrentCustomer.data.isTarget) {
-                    GameManager.Win();
+                    if (likesDrink) {
+                        GameManager.Win();
+                    }
+                    
                     yield break;
                 }
                 else {

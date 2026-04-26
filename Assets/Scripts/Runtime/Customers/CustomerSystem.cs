@@ -12,18 +12,18 @@ namespace JamJam.Runtime.Customers {
         
         public GameObject customerPrefab;
         public float spawnRate;
-        public CustomerSeat[] seats;
         public List<CustomerData> customerPool;
         public CustomerData[] tutorialCustomers;
         public CustomerData finalBoss;
 
+        private bool _isInTutorial;
         private int _satisfaction;
         private float _lastSpawnTime;
         private int _nextTutorialCustomer;
-        
-        private bool IsInTutorial => _nextTutorialCustomer < tutorialCustomers.Length;
+        private CustomerSeat[] _seats;
 
         public static void DeSpawnCustomer(CustomerData data) {
+            Instance._isInTutorial = Instance._nextTutorialCustomer < Instance.tutorialCustomers.Length;
             ActiveCustomers.Remove(data);
         }
         
@@ -38,9 +38,11 @@ namespace JamJam.Runtime.Customers {
         }
 
         private void Awake() {
+            _seats = GetComponentsInChildren<CustomerSeat>();
             Instance = this;
             SpawnedCustomers = new HashSet<CustomerData>(customerPool.Count);
             ActiveCustomers = new HashSet<CustomerData>(customerPool.Count);
+            Instance._isInTutorial = Instance._nextTutorialCustomer < Instance.tutorialCustomers.Length;
         }
 
         private void Update() {
@@ -55,7 +57,9 @@ namespace JamJam.Runtime.Customers {
             
             if (seat == null) return;
 
-            CustomerData data = IsInTutorial ? GetTutorialCustomer() : GetRandomCustomer();
+            if (_isInTutorial && ActiveCustomers.Count >= 1) return;
+             
+            CustomerData data = _isInTutorial ? GetTutorialCustomer() : GetRandomCustomer();
             
             SpawnCustomer(data, seat);
         }
@@ -84,7 +88,7 @@ namespace JamJam.Runtime.Customers {
         }
         
         private CustomerSeat TryFindAvailableSeat() {
-            return seats.FirstOrDefault(customerSeat => customerSeat.Available);
+            return _seats.FirstOrDefault(customerSeat => customerSeat.Available);
         }
     }
 }

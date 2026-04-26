@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A_Rum
   m_EditorClassIdentifier: 
   ingredientVolume: 1
-  ingredientColor: {r: 1, g: 1, b: 1, a: 1}
+  ingredientColor: {r: 0.7169812, g: 0.34077585, b: 0, a: 1}
   flavour:
     sweet: 2
     sour: 0

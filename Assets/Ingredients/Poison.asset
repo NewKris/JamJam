@@ -23,9 +23,10 @@ MonoBehaviour:
     isPoison: 1
     isBeer: 0
   displayName: 
-  description: 'The Silent Killer.
+  description: 'The Silent Killer. Supersalty though.
 
 
-    Did you know that this is poison?'
+    Did you know that this
+    is poison? Remember to compensate for the saltyness.'
   icon: {fileID: 0}
   keyBind: D

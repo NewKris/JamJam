@@ -30,4 +30,4 @@ MonoBehaviour:
     Did you know that you can make use of
     orange peel to start fires? Napalm won''t work though.'
   icon: {fileID: 0}
-  keyBind: Q
+  keyBind: E

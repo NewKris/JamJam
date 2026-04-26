@@ -30,4 +30,4 @@ MonoBehaviour:
     Did you know that Ginger Beer does not
     actually have red hair?'
   icon: {fileID: 0}
-  keyBind: Y
+  keyBind: W

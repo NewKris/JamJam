@@ -30,4 +30,4 @@ MonoBehaviour:
     Did you know that mint activates the
     cold receptors on the tongue, making it feel cool?'
   icon: {fileID: 0}
-  keyBind: R
+  keyBind: Q

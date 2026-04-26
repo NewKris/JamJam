@@ -54,9 +54,8 @@ namespace JamJam.Runtime.Customers {
                 if (CurrentCustomer.data.isTarget) {
                     if (likesDrink) {
                         GameManager.Win();
+                        yield break;
                     }
-                    
-                    yield break;
                 }
                 else {
                     GameManager.Lose("“Hey, what’s wrong, hun? What… Oh, my god, they’re dead! Someone, call the police!”");

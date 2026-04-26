@@ -30,4 +30,4 @@ MonoBehaviour:
     Did you know that cola originally had
     cocaine in it? People rioted when it was removed, to no one''s surprise.'
   icon: {fileID: 0}
-  keyBind: W
+  keyBind: T

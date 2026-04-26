@@ -1936,6 +1936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 5926793136713298845, guid: 2966ebec847aa384aa0b6a2c40fbbb26, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2755398734728681144, guid: 2966ebec847aa384aa0b6a2c40fbbb26, type: 3}
     m_RemovedGameObjects: []
@@ -2537,6 +2541,10 @@ PrefabInstance:
     - target: {fileID: 4480342000100985097, guid: 6e84bbf96afc0824fbb894a822ec7c62, type: 3}
       propertyPath: m_Name
       value: Main Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480342000100985097, guid: 6e84bbf96afc0824fbb894a822ec7c62, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6520387658231045564, guid: 6e84bbf96afc0824fbb894a822ec7c62, type: 3}
       propertyPath: m_text

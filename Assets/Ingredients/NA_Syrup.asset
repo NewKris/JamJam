@@ -30,4 +30,4 @@ MonoBehaviour:
     Did you know that "syrup" comes from
     the Arabic "sharab" which means wine?'
   icon: {fileID: 0}
-  keyBind: T
+  keyBind: R

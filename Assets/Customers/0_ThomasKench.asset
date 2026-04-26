@@ -21,17 +21,17 @@ MonoBehaviour:
       level: 2
       evaluator: 2
     desiredSourness:
-      level: 1
-      evaluator: 0
+      level: 0
+      evaluator: 2
     desiredSaltness:
-      level: 1
-      evaluator: 0
+      level: 0
+      evaluator: 2
     desiredBitterness:
-      level: 1
+      level: 0
       evaluator: 0
     desiredAlcohol:
-      level: 1
-      evaluator: 0
+      level: 0
+      evaluator: 2
     wantBeer: 1
   satisfactionLoss: 0
   satisfactionGain: 10

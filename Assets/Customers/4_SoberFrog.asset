@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ca0af1e5814365a7e08c19d36a905a, type: 3}
   m_Name: 4_SoberFrog
   m_EditorClassIdentifier: 
-  firstBark: 'Hi! Do you have any non-alcoholic drinks? A little bit of everything,
-    but not so sour. '
-  repeatingBark: Hello again. A soda or mocktail please. No orange juice though.
+  firstBark: 'Hello there. You happen to have anythin'' non-alcoholic? A little bit
+    of everything, but not so sour. '
+  repeatingBark: Hi again, dear. Something fizzy, or a mocktail, if you please. I
+    can't stand no orange though.
   desiredFlavour:
     desiredSweetness:
       level: 1

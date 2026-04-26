@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ca0af1e5814365a7e08c19d36a905a, type: 3}
   m_Name: 10_The_Bride
   m_EditorClassIdentifier: 
-  firstBark: 'I just got married! Marquisettes! For me and my brides maids! '
-  repeatingBark: 'Another one! Marquisettes all around! '
+  firstBark: Honey, I heard you're the best tender on this here wedding. Now, let
+    me see if you can make my favorite.
+  repeatingBark: Another one! Marquisettes for everyone!
   desiredFlavour:
     desiredSweetness:
       level: 6

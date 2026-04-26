@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 7_Walter White
   m_EditorClassIdentifier: 
   displayName: Heisenberg
-  firstBark: 'I want something sour, sweet and pink! '
+  firstBark: I need me somethi' sour and sweet. And in pretty red, if you can.
   repeatingBark: One negroni, please.
   desiredFlavour:
     desiredSweetness:

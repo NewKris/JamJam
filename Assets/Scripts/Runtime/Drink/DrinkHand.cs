@@ -40,7 +40,7 @@ namespace JamJam.Runtime.Drink {
             if (!HoldingDrink || mixer.CurrentDrink != null) return;
 
             mixer.CurrentDrink = _heldDrink;
-            _heldDrink.PinDrink(mixer.transform);
+            _heldDrink.PinDrink(mixer.glassPivot);
             ReleaseDrink();
         }
 

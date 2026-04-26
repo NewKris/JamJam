@@ -8,6 +8,7 @@ namespace JamJam.Runtime.Drink {
         public float mixSpeed;
         public Image indicator;
         public AudioSource source;
+        public Transform glassPivot;
         
         public DrinkObject CurrentDrink { get; set; }
 
